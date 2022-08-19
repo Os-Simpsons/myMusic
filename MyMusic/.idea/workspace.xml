@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a286ad6-5e87-4f51-bfac-0179608ee056" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/PlaylistController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/exceptions/ResourceExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/exceptions/StandardError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/dto/MusicDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/service/PlaylistService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/service/PlaylistServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/service/exceptions/MusicAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/service/exceptions/ResourceNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyMusic.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyMusic.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
