@@ -4,7 +4,8 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 @Entity
-public class MusicEntity {
+@Table(name="Musicas")
+public class Musicas {
 
     @Id
     @GeneratedValue(generator = "uuid")

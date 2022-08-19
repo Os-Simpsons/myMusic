@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="Artistas")
-public class ArtistEntity {
+public class Artistas {
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -16,8 +16,8 @@ public class ArtistEntity {
     @Column(name="Nome")
     private String name;
 
-    public ArtistEntity(){}
-    public ArtistEntity(String id, String name) {
+    public Artistas(){}
+    public Artistas(String id, String name) {
         super();
         setId(id);
         setName(name);
