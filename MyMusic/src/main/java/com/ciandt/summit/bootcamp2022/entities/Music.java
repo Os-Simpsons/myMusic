@@ -3,6 +3,7 @@ package com.ciandt.summit.bootcamp2022.entities;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,5 +25,8 @@ public class Music {
     @ManyToOne
     @JoinColumn(name="ArtistaId")
     private Artist artistId;
+
+    @ManyToMany(mappedBy = "musicList")
+    private List<Playlist> playlist;
 
 }
