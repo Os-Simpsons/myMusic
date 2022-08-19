@@ -1,17 +1,16 @@
-package com.ciandt.summit.bootcamp2022.entities;
+package com.ciandt.summit.bootcamp2022.entity;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
-import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name="Artistas")
-public class Artist {
+@Table(name="Musicas")
+public class Music {
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -22,7 +21,8 @@ public class Artist {
     @Column(name="Nome")
     private String name;
 
-    @OneToMany(mappedBy = "artistId")
-    private List<Music> music;
+    @ManyToOne
+    @JoinColumn(name="ArtistaId")
+    private Artist artistId;
 
 }
