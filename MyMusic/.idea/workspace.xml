@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a286ad6-5e87-4f51-bfac-0179608ee056" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.xdp_MyMusic.db.SW1ZQ1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entities/Artistas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entities/Artist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entities/Musicas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entities/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/summit-bootcamp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/summit-bootcamp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entities/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entitiy/Artist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entities/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entitiy/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entities/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entitiy/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/thiagosg/Área de Trabalho/Pastas/CI&T/myMusic/myMusic/MyMusic",
+    "last_opened_file_path": "/home/miguelj/IdeaProjects/myMusic/MyMusic",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
@@ -85,6 +85,26 @@
     <option name="myCommands">
       <command value="mvn clean install" />
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SummitBootcampApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.SummitBootcampApplication" />
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SummitBootcampApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

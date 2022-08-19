@@ -1,6 +1,6 @@
 package com.ciandt.summit.bootcamp2022.repositories;
 
-import com.ciandt.summit.bootcamp2022.entities.Playlist;
+import com.ciandt.summit.bootcamp2022.entity.Playlist;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

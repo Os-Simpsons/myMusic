@@ -1,4 +1,4 @@
-package com.ciandt.summit.bootcamp2022.entities;
+package com.ciandt.summit.bootcamp2022.entity;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;

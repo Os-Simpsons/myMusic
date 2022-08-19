@@ -1,4 +1,4 @@
-package com.ciandt.summit.bootcamp2022.entities;
+package com.ciandt.summit.bootcamp2022.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
