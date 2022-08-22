@@ -1,11 +1,12 @@
 package com.ciandt.summit.bootcamp2022.services;
 
-import com.ciandt.summit.bootcamp2022.entities.Artist;
+import com.ciandt.summit.bootcamp2022.entity.Artist;
 import com.ciandt.summit.bootcamp2022.repositories.ArtistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-@Repository
+@Service
 public class ArtistServiceImpl implements ArtistService{
 
     @Autowired
