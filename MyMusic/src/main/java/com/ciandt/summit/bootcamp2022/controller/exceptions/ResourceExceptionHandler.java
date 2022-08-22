@@ -1,7 +1,7 @@
 package com.ciandt.summit.bootcamp2022.controller.exceptions;
 
-import com.ciandt.summit.bootcamp2022.service.exceptions.MusicAlreadyExistException;
-import com.ciandt.summit.bootcamp2022.service.exceptions.ResourceNotFoundException;
+import com.ciandt.summit.bootcamp2022.services.exceptions.MusicAlreadyExistException;
+import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
