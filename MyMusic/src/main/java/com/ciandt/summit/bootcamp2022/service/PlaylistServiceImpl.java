@@ -1,17 +1,18 @@
 package com.ciandt.summit.bootcamp2022.service;
 
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
+import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.entity.Music;
 import com.ciandt.summit.bootcamp2022.entity.Playlist;
 import com.ciandt.summit.bootcamp2022.repositories.MusicRepository;
 import com.ciandt.summit.bootcamp2022.repositories.PlaylistRepository;
 import com.ciandt.summit.bootcamp2022.service.exceptions.MusicAlreadyExistException;
 import com.ciandt.summit.bootcamp2022.service.exceptions.ResourceNotFoundException;
+import com.ciandt.summit.bootcamp2022.utils.TokenService;
+import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.sqlite.SQLiteException;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -24,11 +25,16 @@ public class PlaylistServiceImpl implements PlaylistService{
     @Autowired
     private MusicRepository musicRepository;
 
+    @Autowired
+    private TokenService tokenService;
+
 
     @Transactional
     @Override
-    public void saveMusicToPlaylist(String id, MusicDto musicDto) {
+    public void saveMusicToPlaylist(String id, MusicDto musicDto, UsernameDto usernameDto) throws InvalidLogDataException {
         try {
+            tokenService.validateToken(usernameDto);
+
             Playlist playlist = playlistRepository.getById(id);
             Music music = musicRepository.getById(musicDto.getId());
             for (Music musicFind : playlist.getMusicList()) {
@@ -41,6 +47,8 @@ public class PlaylistServiceImpl implements PlaylistService{
             playlistRepository.save(playlist);
         } catch (EntityNotFoundException e) {
             throw new ResourceNotFoundException("this Id not exist in database");
+        } catch (InvalidLogDataException e) {
+            throw new InvalidLogDataException(e.getMessage());
         }
     }
 }
