@@ -5,7 +5,9 @@ import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.repositories.UserRepository;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class TokenService {
 
     @Autowired
@@ -34,7 +36,7 @@ public class TokenService {
     }
 
     public boolean validateUserName(String username) {
-        return userRepository.getByNome(username).isPresent();
+        return userRepository.findByName(username).isPresent();
     }
 
 

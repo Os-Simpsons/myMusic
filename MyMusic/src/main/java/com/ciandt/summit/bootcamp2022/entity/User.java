@@ -27,6 +27,6 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "PlaylistId")//Nullable?
-    private String playlist;
+    private Playlist playlist;
 
 }

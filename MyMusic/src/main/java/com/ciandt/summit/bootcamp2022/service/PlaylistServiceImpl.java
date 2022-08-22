@@ -31,10 +31,12 @@ public class PlaylistServiceImpl implements PlaylistService{
 
     @Transactional
     @Override
-    public void saveMusicToPlaylist(String id, MusicDto musicDto, UsernameDto usernameDto) throws InvalidLogDataException {
+    public void saveMusicToPlaylist(String id, MusicDto musicDto, UsernameDto usernameDto) {
         try {
-            tokenService.validateToken(usernameDto);
-
+            tokenService.createToken(usernameDto);
+            //tokenService.validateToken(usernameDto);
+            System.out.println(usernameDto.getName());
+            //System.out.println(usernameDto.getToken());
             Playlist playlist = playlistRepository.getById(id);
             Music music = musicRepository.getById(musicDto.getId());
             for (Music musicFind : playlist.getMusicList()) {
@@ -47,8 +49,8 @@ public class PlaylistServiceImpl implements PlaylistService{
             playlistRepository.save(playlist);
         } catch (EntityNotFoundException e) {
             throw new ResourceNotFoundException("this Id not exist in database");
-        } catch (InvalidLogDataException e) {
-            throw new InvalidLogDataException(e.getMessage());
+        } catch (InvalidLogDataException | NullPointerException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
