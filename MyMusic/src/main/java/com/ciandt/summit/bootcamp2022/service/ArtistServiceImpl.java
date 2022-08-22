@@ -1,6 +1,6 @@
-package com.ciandt.summit.bootcamp2022.services;
+package com.ciandt.summit.bootcamp2022.service;
 
-import com.ciandt.summit.bootcamp2022.entities.Artist;
+import com.ciandt.summit.bootcamp2022.entity.Artist;
 import com.ciandt.summit.bootcamp2022.repositories.ArtistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
