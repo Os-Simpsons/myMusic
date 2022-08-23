@@ -1,5 +1,21 @@
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/config/SqlDialect.java
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/config/DbConfig.java
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/SummitBootcampApplication.java
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/MusicController.java
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/service/MusicaService.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/config/SqlDialect.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/exceptions/ResourceExceptionHandler.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistService.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/exceptions/StandardError.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/ArtistService.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/config/DbConfig.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/entity/Playlist.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/MusicController.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/ArtistServiceImpl.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/PlaylistController.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/entity/Music.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/entity/Artist.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/swagger/SwaggerConfig.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/SummitBootcampApplication.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/exceptions/ResourceNotFoundException.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/repositories/ArtistRepository.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/dto/MusicDto.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepository.java
+/home/karin/Documentos/mymusic/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/exceptions/MusicAlreadyExistException.java
