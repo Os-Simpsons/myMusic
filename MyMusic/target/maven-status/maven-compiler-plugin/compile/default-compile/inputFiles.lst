@@ -1,5 +1,27 @@
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/config/SqlDialect.java
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/config/DbConfig.java
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/SummitBootcampApplication.java
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/MusicController.java
-/home/karin/my music/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/service/MusicaService.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/repositories/UserRepository.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/MusicController.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/MusicService.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/SummitBootcampApplication.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/entity/Artist.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/config/SqlDialect.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/PlaylistController.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/entity/Playlist.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistService.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/utils/TokenService.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/exceptions/ResourceExceptionHandler.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/utils/exceptions/InvalidLogDataException.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/UserController.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/entity/User.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepository.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/dto/MusicDto.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/config/DbConfig.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/exceptions/ResourceNotFoundException.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/controller/exceptions/StandardError.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/services/exceptions/MusicAlreadyExistException.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/dto/UsernameDto.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/dto/Data.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/client/TokenFeignClient.java
+/home/joaobraga/Coding/myMusic/MyMusic/src/main/java/com/ciandt/summit/bootcamp2022/entity/Music.java

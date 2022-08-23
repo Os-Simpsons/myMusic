@@ -1,5 +1,6 @@
 package com.ciandt.summit.bootcamp2022.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class Artist {
     @Column(name="Nome")
     private String name;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "artistId")
     private List<Music> music;
 
