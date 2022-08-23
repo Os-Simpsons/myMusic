@@ -16,12 +16,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/music")
 public class MusicController {
-
-
-        /*
-        @Autowired
-        MusicService musicService;
-
+    @Autowired
+    MusicService musicService;
 
     @GetMapping
     public ResponseEntity<List<Music>> getAllForms(@RequestParam(value = "name", required = false) String name) {
