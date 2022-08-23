@@ -1,6 +1,7 @@
 package com.ciandt.summit.bootcamp2022.services;
 
 import com.ciandt.summit.bootcamp2022.entity.Artist;
+import com.ciandt.summit.bootcamp2022.entity.Music;
 import com.ciandt.summit.bootcamp2022.repositories.ArtistRepository;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
 import org.apache.logging.log4j.LogManager;
@@ -19,7 +20,17 @@ public class ArtistServiceImpl implements ArtistService {
 
     //TODO - Implementar metodo getArtistByName
 
-    @Override
+    public List<Artist> getMusicByArtist(){
+        return artistRepository.getAllArtist();
+    }
+
+//    public List<Music> getAll(String name, String music){
+//
+//
+//    }
+
+
+
     public Artist getArtistById(String id) {
         Artist artists = new Artist();
         try {
