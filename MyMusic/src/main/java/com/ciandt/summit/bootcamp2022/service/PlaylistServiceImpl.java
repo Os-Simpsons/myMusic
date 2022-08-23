@@ -33,10 +33,7 @@ public class PlaylistServiceImpl implements PlaylistService{
     @Override
     public void saveMusicToPlaylist(String id, MusicDto musicDto, UsernameDto usernameDto) {
         try {
-            tokenService.createToken(usernameDto);
-            //tokenService.validateToken(usernameDto);
-            System.out.println(usernameDto.getName());
-            //System.out.println(usernameDto.getToken());
+            tokenService.validateToken(usernameDto);
             Playlist playlist = playlistRepository.getById(id);
             Music music = musicRepository.getById(musicDto.getId());
             for (Music musicFind : playlist.getMusicList()) {
@@ -49,8 +46,8 @@ public class PlaylistServiceImpl implements PlaylistService{
             playlistRepository.save(playlist);
         } catch (EntityNotFoundException e) {
             throw new ResourceNotFoundException("this Id not exist in database");
-        } catch (InvalidLogDataException | NullPointerException e) {
-            System.out.println(e.getMessage());
+        } catch (InvalidLogDataException e ) {
+            throw new InvalidLogDataException(e.getMessage());
         }
     }
 }

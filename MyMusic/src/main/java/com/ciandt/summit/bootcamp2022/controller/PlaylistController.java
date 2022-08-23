@@ -1,9 +1,9 @@
 package com.ciandt.summit.bootcamp2022.controller;
 
+import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.service.PlaylistService;
-import com.ciandt.summit.bootcamp2022.service.PlaylistServiceImpl;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,8 +21,8 @@ public class PlaylistController {
     public void addMusicToPlaylist(@PathVariable String playlistId
             , @RequestBody MusicDto musicDto
             ,@RequestHeader(value = "name") String nome
-            /*,@RequestHeader(value = "token") String token*/) throws InvalidLogDataException {
-        UsernameDto usernameDto = new UsernameDto(nome);
+            ,@RequestHeader(value = "token") String token) throws InvalidLogDataException {
+        UsernameDto usernameDto = new UsernameDto(new Data(nome,token));
         playlistService.saveMusicToPlaylist(playlistId, musicDto, usernameDto);
     }
 

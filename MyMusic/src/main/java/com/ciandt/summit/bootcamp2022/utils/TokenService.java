@@ -4,10 +4,11 @@ import com.ciandt.summit.bootcamp2022.client.TokenFeignClient;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.repositories.UserRepository;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
+import feign.FeignException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class TokenService {
 
     @Autowired
@@ -18,27 +19,29 @@ public class TokenService {
 
     public String createToken(UsernameDto usernameDto) throws InvalidLogDataException {
 
-        if(!validateUserName(usernameDto.getName())) {
+        if(!validateUserName(usernameDto.getData().getName())) {
             throw new InvalidLogDataException("Invalid Username!");
         }
+
         return tokenFeignClient.createToken(usernameDto);
     }
 
     public void validateToken(UsernameDto usernameDto) throws InvalidLogDataException {
-        //if pessoa existe _> if token ta correto -> true
-        //else return false;
-        if(!validateUserName(usernameDto.getName())) {
-            throw new InvalidLogDataException("Invalid Username!");
+        try {
+            if(!validateUserName(usernameDto.getData().getName())) {
+                throw new InvalidLogDataException("Invalid Username!");
+            }
+            if(!tokenFeignClient.authorizeToken(usernameDto).equals("ok")) {
+                throw new InvalidLogDataException("Invalid Token!");
+            }
+        } catch (FeignException e) {
+            throw new InvalidLogDataException("Invalid or Expired Token!");
         }
-        if(usernameDto.getToken()!=tokenFeignClient.authorizeToken(usernameDto)) {
-            throw new InvalidLogDataException("Invalid Token!");
-        }
+
     }
 
     public boolean validateUserName(String username) {
         return userRepository.findByName(username).isPresent();
     }
-
-
 
 }
