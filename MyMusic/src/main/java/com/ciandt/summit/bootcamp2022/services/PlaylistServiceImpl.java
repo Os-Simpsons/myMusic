@@ -1,22 +1,20 @@
-package com.ciandt.summit.bootcamp2022.service;
+package com.ciandt.summit.bootcamp2022.services;
 
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
 import com.ciandt.summit.bootcamp2022.entity.Music;
 import com.ciandt.summit.bootcamp2022.entity.Playlist;
 import com.ciandt.summit.bootcamp2022.repositories.MusicRepository;
 import com.ciandt.summit.bootcamp2022.repositories.PlaylistRepository;
-import com.ciandt.summit.bootcamp2022.service.exceptions.MusicAlreadyExistException;
-import com.ciandt.summit.bootcamp2022.service.exceptions.ResourceNotFoundException;
+import com.ciandt.summit.bootcamp2022.services.exceptions.MusicAlreadyExistException;
+import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.sqlite.SQLiteException;
 
 import javax.persistence.EntityNotFoundException;
 
 @Service
-public class PlaylistServiceImpl implements PlaylistService{
+public class PlaylistServiceImpl implements PlaylistService {
 
     @Autowired
     private PlaylistRepository playlistRepository;
