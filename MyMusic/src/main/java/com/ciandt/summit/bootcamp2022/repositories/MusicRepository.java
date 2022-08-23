@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface MusicRepository extends JpaRepository<Music, String> {
-    @Query(value = "SELECT DISTINCT M FROM Musicas M INNER JOIN Artistas A ON M.ArtistaId =  A.Id")
-    public List<Music> getAllMusics();
+    /*@Query(value = "SELECT DISTINCT M FROM Musicas M INNER JOIN Artistas A ON M.ArtistaId =  A.Id")
+    public List<Music> getAllMusics();*/
 
 }

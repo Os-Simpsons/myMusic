@@ -3,7 +3,7 @@ package com.ciandt.summit.bootcamp2022.controller;
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
-import com.ciandt.summit.bootcamp2022.service.PlaylistService;
+import com.ciandt.summit.bootcamp2022.services.PlaylistService;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

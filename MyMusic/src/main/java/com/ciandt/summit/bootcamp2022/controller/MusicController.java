@@ -20,6 +20,7 @@ public class MusicController {
             return ResponseEntity.ok("67f5976c-eb1e-404e-8220-2c2a8a23be47");
         }
 
+        /*
         @Autowired
         ArtistService artistService;
 
@@ -28,5 +29,5 @@ public class MusicController {
          public ResponseEntity<List<Artist>> getAllArtists(@QueryParam("music") Music music, @QueryParam("artist") Artist artist){
              List<Artist> artistList = ar
              return new ResponseEntity<List<Artist>>(artistList , HttpStatus.OK);
-         }
+         }*/
     }
