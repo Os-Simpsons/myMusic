@@ -20,9 +20,9 @@ public class ArtistServiceImpl implements ArtistService {
 
     //TODO - Implementar metodo getArtistByName
 
-    public List<Artist> getMusicByArtist(){
+    /*public List<Artist> getMusicByArtist(){
         return artistRepository.getAllArtist();
-    }
+    }*/
 
 //    public List<Music> getAll(String name, String music){
 //

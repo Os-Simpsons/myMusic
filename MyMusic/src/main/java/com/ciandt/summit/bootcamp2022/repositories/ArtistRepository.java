@@ -8,8 +8,8 @@ import java.util.List;
 
 @Repository
     public interface ArtistRepository extends JpaRepository<Artist, String> {
-        @Query(value = "SELECT DISTINCT A FROM Artistas A INNER JOIN Musicas M ON A.Id =  M.ArtistasId")
-        public List<Artist> getAllArtist();
+        /*@Query(value = "SELECT DISTINCT A FROM Artistas A INNER JOIN Musicas M ON A.Id =  M.ArtistasId")
+        public List<Artist> getAllArtist();*/
     }
 
 
