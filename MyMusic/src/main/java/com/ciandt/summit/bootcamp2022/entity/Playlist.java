@@ -34,5 +34,8 @@ public class Playlist {
     @OneToMany(mappedBy = "playlist")
     private List<User> usersList;
 
-
+    public Playlist(List<Music> musicList, List<User> usersList) {
+        this.musicList = musicList;
+        this.usersList = usersList;
+    }
 }
