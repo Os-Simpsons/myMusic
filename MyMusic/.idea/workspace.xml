@@ -5,12 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a286ad6-5e87-4f51-bfac-0179608ee056" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/SummitBootcampApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/MusicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/MusicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/PlaylistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/PlaylistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../summit-bootcamp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../summit-bootcamp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/SummitBootcampApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/SummitBootcampApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/client/TokenFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/client/TokenFeignClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/DbConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/DbConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqlDialect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqlDialect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqliteConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqliteConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/MusicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/MusicController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/PlaylistController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/PlaylistController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/ResourceExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/ResourceExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/StandardError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/StandardError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/MusicDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/MusicDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/UsernameDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/UsernameDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Artist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Artist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Music.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Playlist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/MusicAlreadyExistException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/MusicAlreadyExistException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/ResourceNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/TokenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/exceptions/InvalidLogDataException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/exceptions/InvalidLogDataException.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,26 +97,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;LombokPluginIS_LOMBOK_JPS_FIX_ENABLED&quot;: &quot;true&quot;,
-    &quot;LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/miguelj/IdeaProjects/tc-hbtn-microsservicos_java/0x08/ProductAPI&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Lombok&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "LombokPluginIS_LOMBOK_JPS_FIX_ENABLED": "true",
+    "LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/miguelj/IdeaProjects/myMusic/MyMusic/src/main/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Lombok"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -95,7 +129,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="com.ciandt.summit.bootcamp2022.SummitBootcampApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="SummitBootcampApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.SummitBootcampApplication" />
