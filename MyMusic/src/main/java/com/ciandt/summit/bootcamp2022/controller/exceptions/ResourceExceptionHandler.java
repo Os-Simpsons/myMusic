@@ -1,7 +1,8 @@
 package com.ciandt.summit.bootcamp2022.controller.exceptions;
 
-import com.ciandt.summit.bootcamp2022.service.exceptions.MusicAlreadyExistException;
-import com.ciandt.summit.bootcamp2022.service.exceptions.ResourceNotFoundException;
+import com.ciandt.summit.bootcamp2022.services.exceptions.MusicAlreadyExistException;
+import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
+import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -32,6 +33,18 @@ public class ResourceExceptionHandler {
         err.setTimestamp(Instant.now());
         err.setStatus(status.value());
         err.setError("Music already exist in this playlist");
+        err.setMessage(e.getMessage());
+        err.setPath(request.getRequestURI());
+        return ResponseEntity.status(status).body(err);
+    }
+
+    @ExceptionHandler(InvalidLogDataException.class)
+    public ResponseEntity<StandardError> tokenNotFound(InvalidLogDataException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.UNAUTHORIZED;
+        StandardError err = new StandardError();
+        err.setTimestamp(Instant.now());
+        err.setStatus(status.value());
+        err.setError("Authorization Error!");
         err.setMessage(e.getMessage());
         err.setPath(request.getRequestURI());
         return ResponseEntity.status(status).body(err);

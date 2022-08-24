@@ -31,6 +31,8 @@ public class Playlist {
     )
     private List<Music> musicList;
 
+    @OneToMany(mappedBy = "playlist")
+    private List<User> usersList;
 
 
 }

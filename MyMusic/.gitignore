@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 workspace.xml
+=======
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+>>>>>>> 93c056c9e05e11c3621d967e6874d7e7d6ab530f
