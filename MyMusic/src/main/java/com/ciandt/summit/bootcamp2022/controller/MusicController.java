@@ -23,11 +23,12 @@ public class MusicController {
     MusicService musicService;
 
     @GetMapping
-    public ResponseEntity<List<Music>> getAllForms(@RequestParam(value = "name", required = false) String name,
-                                                   @RequestHeader(value = "name") String nome
-            ,@RequestHeader(value = "token") String token) throws InvalidLogDataException {
+    public ResponseEntity<List<Music>> getAllForms
+            (@RequestParam(value = "name", required = false) String name
+            ,@RequestHeader(value = "name") String nome
+            ,@RequestHeader(value = "token") String token) {
         UsernameDto usernameDto = new UsernameDto(new Data(nome,token));
-        List<Music> music = musicService.buscarPorArtist(name, usernameDto);
+        List<Music> music = musicService.getMusics(name, usernameDto);
 
         return ResponseEntity.ok(music);
     }
