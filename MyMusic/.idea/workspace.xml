@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2a286ad6-5e87-4f51-bfac-0179608ee056" name="Changes" comment="Criação da entidade User,UserRepository, e TokenService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/dto/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/dto/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/dto/UsernameDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/dto/UsernameDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/UsernameDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/UsernameDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Music.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Playlist.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +220,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Criação da entidade User,UserRepository, e TokenService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação da entidade User,UserRepository, e TokenService" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
