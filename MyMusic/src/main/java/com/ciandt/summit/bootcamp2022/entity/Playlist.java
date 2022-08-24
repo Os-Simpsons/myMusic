@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
@@ -29,10 +30,10 @@ public class Playlist {
             joinColumns = @JoinColumn(name = "PlaylistId"),
             inverseJoinColumns = @JoinColumn(name = "MusicaId")
     )
-    private List<Music> musicList;
+    private List<Music> musicList = new ArrayList<>();
 
     @OneToMany(mappedBy = "playlist")
-    private List<User> usersList;
+    private List<User> usersList = new ArrayList<>();
 
     public Playlist(List<Music> musicList, List<User> usersList) {
         this.musicList = musicList;
