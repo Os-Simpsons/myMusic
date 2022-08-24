@@ -21,7 +21,7 @@ public class PlaylistController {
     public void addMusicToPlaylist(@PathVariable String playlistId
             , @RequestBody MusicDto musicDto
             ,@RequestHeader(value = "name") String nome
-            ,@RequestHeader(value = "token") String token) throws InvalidLogDataException {
+            ,@RequestHeader(value = "token") String token){
         UsernameDto usernameDto = new UsernameDto(new Data(nome,token));
         playlistService.saveMusicToPlaylist(playlistId, musicDto, usernameDto);
     }

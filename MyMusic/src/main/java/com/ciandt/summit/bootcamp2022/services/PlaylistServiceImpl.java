@@ -10,6 +10,8 @@ import com.ciandt.summit.bootcamp2022.services.exceptions.MusicAlreadyExistExcep
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
 import com.ciandt.summit.bootcamp2022.utils.TokenService;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,6 +30,8 @@ public class PlaylistServiceImpl implements PlaylistService {
     @Autowired
     private TokenService tokenService;
 
+    private static Logger logger = LogManager.getLogger(PlaylistServiceImpl.class);
+
 
     @Transactional
     @Override
@@ -38,15 +42,19 @@ public class PlaylistServiceImpl implements PlaylistService {
             Music music = musicRepository.getById(musicDto.getId());
             for (Music musicFind : playlist.getMusicList()) {
                 if (musicFind.getId() == music.getId()){
+                    logger.error("Music Already exist in this playlist.");
                     throw new MusicAlreadyExistException("Music Already exist in this playlist.");
                 }
             }
             playlist.getMusicList().add(music);
             music.getPlaylist().add(playlist);
             playlistRepository.save(playlist);
+            logger.info("Music add in the playlist");
         } catch (EntityNotFoundException e) {
+            logger.error("this Id not exist in database");
             throw new ResourceNotFoundException("this Id not exist in database");
         } catch (InvalidLogDataException e ) {
+            logger.error("Invalid Token name");
             throw new InvalidLogDataException(e.getMessage());
         }
     }

@@ -17,17 +17,23 @@ public class MusicServiceImpl implements MusicService {
 
     @Autowired
     private MusicRepository musicRepository;
+
     private static Logger logger = LogManager.getLogger(MusicServiceImpl.class);
+
     @Autowired
     private TokenService tokenService;
 
     @Override
-    public List<Music> buscarPorArtist(String name, UsernameDto usernameDto) {
+    public List<Music> getMusics(String name, UsernameDto usernameDto) {
         try {
             tokenService.validateToken(usernameDto);
-            return musicRepository.getAllMusicArtist(name);
+            List<Music> music = musicRepository.getAllMusicArtist(name);
+            logger.info("Music/Artist found");
+            return music;
+
         } catch (
                 InvalidLogDataException e) {
+            logger.error("Invalid Token name");
             throw new InvalidLogDataException(e.getMessage());
         }
     }}
