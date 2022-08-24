@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
@@ -29,6 +30,6 @@ public class Music {
 
     @JsonIgnore
     @ManyToMany(mappedBy = "musicList")
-    private List<Playlist> playlist;
+    private List<Playlist> playlist = new ArrayList<>();
 
 }
