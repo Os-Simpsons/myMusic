@@ -3,6 +3,7 @@ package com.ciandt.summit.bootcamp2022.services;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.entity.Music;
 import com.ciandt.summit.bootcamp2022.repositories.MusicRepository;
+import com.ciandt.summit.bootcamp2022.services.exceptions.ValidateSizeNameException;
 import com.ciandt.summit.bootcamp2022.utils.TokenService;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.apache.logging.log4j.LogManager;
@@ -27,6 +28,9 @@ public class MusicServiceImpl implements MusicService {
     public List<Music> getMusics(String name, UsernameDto usernameDto) {
         try {
             tokenService.validateToken(usernameDto);
+            if(!checkWordSize(name)){
+                throw new ValidateSizeNameException("Artist's name mustn't have less than 3 characters");
+            }
             List<Music> music = musicRepository.getAllMusicArtist(name);
             logger.info("Music/Artist found");
             return music;
@@ -36,4 +40,14 @@ public class MusicServiceImpl implements MusicService {
             logger.error("Invalid Token name");
             throw new InvalidLogDataException(e.getMessage());
         }
-    }}
+    }
+
+    private boolean checkWordSize(String name){
+        boolean check = true;
+        if(name.length() <= 3 || name == null){
+            check = false;
+        }
+        return check;
+    }
+}
+

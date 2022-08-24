@@ -24,7 +24,7 @@ public class MusicController {
 
     @GetMapping
     public ResponseEntity<List<Music>> getAllForms
-            (@RequestParam(value = "name", required = false) String name
+            (@RequestParam(value = "name") String name
             ,@RequestHeader(value = "name") String nome
             ,@RequestHeader(value = "token") String token) {
         UsernameDto usernameDto = new UsernameDto(new Data(nome,token));
