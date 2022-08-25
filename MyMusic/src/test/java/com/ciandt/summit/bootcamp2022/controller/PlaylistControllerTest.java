@@ -7,15 +7,14 @@ import com.ciandt.summit.bootcamp2022.entity.Artist;
 import com.ciandt.summit.bootcamp2022.entity.Music;
 import com.ciandt.summit.bootcamp2022.entity.Playlist;
 import com.ciandt.summit.bootcamp2022.entity.User;
-import com.ciandt.summit.bootcamp2022.services.PlaylistService;
 import com.ciandt.summit.bootcamp2022.services.PlaylistServiceImpl;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
-import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentMatchers;
+
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -24,14 +23,11 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.test.web.servlet.ResultMatcher;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 
 @ExtendWith(SpringExtension.class)
@@ -75,9 +71,6 @@ public class PlaylistControllerTest {
         musicReturned = new Music("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist, playlistMusic);
 
         Mockito.doNothing().when(playlistService).saveMusicToPlaylist(playlistExistingId, musicDto,usernameDto);
-
-       // Mockito.when(playlistService.saveMusicToPlaylist(playlistNotExistId, musicDto, usernameDto)).thenThrow(ResourceNotFoundException.class)
-        //Mockito.doThrow(InvalidLogDataException.class).when(playlistService).saveMusicToPlaylist(playlistExistingId, musicDto, usernameDto);
     }
 
     @Test
