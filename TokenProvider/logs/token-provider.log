@@ -1,0 +1,31 @@
+2022-08-25 14:25:58,776 INFO org.springframework.boot.StartupInfoLogger [main] Starting TokenProviderApplication using Java 11.0.16 on lnb036045cps with PID 107778 (/home/miguelj/IdeaProjects/myMusic/TokenProvider/target/classes started by CIANDT\miguelj in /home/miguelj/IdeaProjects/myMusic/TokenProvider)
+2022-08-25 14:25:58,779 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-25 14:25:59,932 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-08-25 14:25:59,942 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-08-25 14:25:59,942 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-08-25 14:25:59,943 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-08-25 14:26:00,001 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-08-25 14:26:00,001 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1143 ms
+2022-08-25 14:26:00,745 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-25 14:26:00,777 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-08-25 14:26:00,798 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-08-25 14:26:00,821 INFO org.springframework.boot.StartupInfoLogger [main] Started TokenProviderApplication in 2.671 seconds (JVM running for 3.634)
+2022-08-25 14:28:07,617 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-25 14:28:07,619 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-08-25 14:28:07,621 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2022-08-25 14:28:07,755 INFO com.ciandt.token.provider.controllers.TokenController [http-nio-8080-exec-1] Recebido requisição para criação de token para chave: ana
+2022-08-25 14:28:07,810 INFO com.ciandt.token.provider.controllers.TokenController [http-nio-8080-exec-1] Token gerado com sucesso
+2022-08-25 14:28:34,299 INFO com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-2] Recebido requisição para geração de token: ana
+2022-08-25 14:28:34,304 INFO com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-2] Token validado com sucesso
+2022-08-25 14:30:21,611 INFO com.ciandt.token.provider.controllers.TokenController [http-nio-8080-exec-4] Recebido requisição para criação de token para chave: ana
+2022-08-25 14:30:21,614 INFO com.ciandt.token.provider.controllers.TokenController [http-nio-8080-exec-4] Token gerado com sucesso
+2022-08-25 14:30:33,135 INFO com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-5] Recebido requisição para geração de token: ana
+2022-08-25 14:30:33,137 INFO com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-5] Token validado com sucesso
+2022-08-25 14:31:14,425 INFO com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-6] Recebido requisição para geração de token: ana
+2022-08-25 14:31:14,426 INFO com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-6] Token validado com sucesso
+2022-08-25 14:31:24,896 INFO com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-7] Recebido requisição para geração de token: ana
+2022-08-25 14:31:24,898 ERROR com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-7] Requisição inválida: Token expirado
+2022-08-25 14:31:31,044 INFO com.ciandt.token.provider.controllers.TokenController [http-nio-8080-exec-8] Recebido requisição para criação de token para chave: ana
+2022-08-25 14:31:31,046 INFO com.ciandt.token.provider.controllers.TokenController [http-nio-8080-exec-8] Token gerado com sucesso
+2022-08-25 14:31:40,182 INFO com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-9] Recebido requisição para geração de token: ana
+2022-08-25 14:31:40,184 INFO com.ciandt.token.provider.controllers.TokenAuthorizerController [http-nio-8080-exec-9] Token validado com sucesso
