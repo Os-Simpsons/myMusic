@@ -4,80 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="2a286ad6-5e87-4f51-bfac-0179608ee056" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/SummitBootcampApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/SummitBootcampApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/client/TokenFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/client/TokenFeignClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/DbConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/DbConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqlDialect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqlDialect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqliteConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqliteConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/MusicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/MusicController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/PlaylistController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/PlaylistController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/ResourceExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/ResourceExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/StandardError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/StandardError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/MusicDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/MusicDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/UsernameDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/UsernameDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Artist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Artist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Music.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/MusicAlreadyExistException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/MusicAlreadyExistException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/ResourceNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/TokenService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/exceptions/InvalidLogDataException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/exceptions/InvalidLogDataException.class" afterDir="false" />
-=======
-    <list default="true" id="2a286ad6-5e87-4f51-bfac-0179608ee056" name="Changes" comment="Criação da entidade User,UserRepository, e TokenService">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> feature/BOOT-749
+    <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/summit-bootcamp2022.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/MusicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/MusicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/PlaylistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/PlaylistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/SummitBootcampApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/client/TokenFeignClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/DbConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqlDialect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/config/SqliteConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/MusicController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/PlaylistController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/ResourceExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/controller/exceptions/StandardError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/Data.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/MusicDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/dto/UsernameDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Artist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Music.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/Playlist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/MusicAlreadyExistException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/services/exceptions/ResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/TokenService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ciandt/summit/bootcamp2022/utils/exceptions/InvalidLogDataException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/summit-bootcamp-0.0.1-SNAPSHOT-spring-boot.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/summit-bootcamp-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/summit-bootcamp-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ciandt/summit/bootcamp2022/SummitBootcampApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImplTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="dev" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -89,224 +77,27 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2DXA8pun7Dd17bLqtnfFrE5B90A" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2Dr59Wsq29PeryurrwCtzjuyhYN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;LombokPluginIS_LOMBOK_JPS_FIX_ENABLED&quot;: &quot;true&quot;,
-    &quot;LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/miguelj/IdeaProjects/myMusic/MyMusic/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Lombok&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Git.Branch.Popup.ShowAllRemotes": "true",
-    "LombokPluginIS_LOMBOK_JPS_FIX_ENABLED": "true",
-    "LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/miguelj/IdeaProjects/tc-hbtn_teste/0x01/mei",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "Lombok"
->>>>>>> feature/BOOT-749
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/test" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn clean install" />
-    </option>
-  </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="Application.SummitBootcampApplication">
-    <configuration name="SummitBootcampApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.SummitBootcampApplication" />
-=======
-  <component name="RunManager" selected="JUnit.PlaylistServiceImplTest.ShouldReturnMusicAlreadyExistExceptionWhenMusicIsAlreadyInPlaylist">
-    <configuration name="PlaylistServiceImplTest.ShouldReturnInvalidLogDataExceptionWhenInvalidToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> feature/BOOT-749
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
-      <option name="METHOD_NAME" value="ShouldReturnInvalidLogDataExceptionWhenInvalidToken" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistServiceImplTest.ShouldReturnInvalidLogDataExceptionWhenInvalidUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
-      <option name="METHOD_NAME" value="ShouldReturnInvalidLogDataExceptionWhenInvalidUsername" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistServiceImplTest.ShouldReturnMusicAlreadyExistExceptionWhenMusicIsAlreadyInPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
-      <option name="METHOD_NAME" value="ShouldReturnMusicAlreadyExistExceptionWhenMusicIsAlreadyInPlaylist" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistServiceImplTest.shouldRertunNotFoundWhenNotExistsMusicDtoId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
-      <option name="METHOD_NAME" value="shouldRertunNotFoundWhenNotExistsMusicDtoId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistServiceImplTest.shouldRertunNotFoundWhenNotExistsPlaylistId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
-      <option name="METHOD_NAME" value="shouldRertunNotFoundWhenNotExistsPlaylistId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistRepositoryTest.shouldStorePlayslist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.repositories" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.repositories.PlaylistRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldStorePlayslist" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-<<<<<<< HEAD
-        <item itemvalue="Application.SummitBootcampApplication" />
-        <item itemvalue="JUnit.PlaylistRepositoryTest.shouldStorePlayslist" />
-=======
-        <item itemvalue="JUnit.PlaylistServiceImplTest.ShouldReturnMusicAlreadyExistExceptionWhenMusicIsAlreadyInPlaylist" />
-        <item itemvalue="JUnit.PlaylistServiceImplTest.ShouldReturnInvalidLogDataExceptionWhenInvalidToken" />
-        <item itemvalue="JUnit.PlaylistServiceImplTest.ShouldReturnInvalidLogDataExceptionWhenInvalidUsername" />
-        <item itemvalue="JUnit.PlaylistServiceImplTest.shouldRertunNotFoundWhenNotExistsMusicDtoId" />
-        <item itemvalue="JUnit.PlaylistServiceImplTest.shouldRertunNotFoundWhenNotExistsPlaylistId" />
->>>>>>> feature/BOOT-749
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2a286ad6-5e87-4f51-bfac-0179608ee056" name="Changes" comment="" />
-      <created>1660834898734</created>
+      <changelist id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="" />
+      <created>1661444214210</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1660834898734</updated>
+      <updated>1661444214210</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="feature/BOOT-751" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Criação da entidade User,UserRepository, e TokenService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação da entidade User,UserRepository, e TokenService" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

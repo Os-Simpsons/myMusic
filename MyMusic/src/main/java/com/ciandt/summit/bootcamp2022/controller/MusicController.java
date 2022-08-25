@@ -1,6 +1,5 @@
 package com.ciandt.summit.bootcamp2022.controller;
 
-
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.entity.Music;
@@ -9,9 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-
-
 
 @RestController
 @RequestMapping("/v1/music")
@@ -22,16 +20,13 @@ public class MusicController {
     @GetMapping
     public ResponseEntity<List<Music>> getAllForms
             (@RequestParam(value = "name") String name
-            ,@RequestHeader(value = "name") String nome
-            ,@RequestHeader(value = "token") String token) {
-        UsernameDto usernameDto = new UsernameDto(new Data(nome,token));
+                    , @RequestHeader(value = "name") String nome
+                    , @RequestHeader(value = "token") String token) {
+        UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
         List<Music> music = musicService.getMusics(name, usernameDto);
-        if(music == null || music.isEmpty()){
+        if (music == null || music.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-
         return ResponseEntity.ok(music);
     }
-
-
 }

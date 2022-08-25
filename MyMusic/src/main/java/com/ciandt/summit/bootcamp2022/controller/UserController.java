@@ -20,6 +20,4 @@ public class UserController {
     public String getToken(@RequestBody UsernameDto username) throws InvalidLogDataException {
         return tokenFeignClient.createToken(username);
     }
-
-
 }
