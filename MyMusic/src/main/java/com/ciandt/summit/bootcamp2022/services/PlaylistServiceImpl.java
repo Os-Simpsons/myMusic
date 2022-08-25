@@ -32,7 +32,6 @@ public class PlaylistServiceImpl implements PlaylistService {
 
     private static Logger logger = LogManager.getLogger(PlaylistServiceImpl.class);
 
-
     @Transactional
     @Override
     public void saveMusicToPlaylist(String id, MusicDto musicDto, UsernameDto usernameDto) {
