@@ -32,7 +32,7 @@ public class PlaylistRepositoryTest {
         List<User> userList = new ArrayList<>();
         Playlist playlist = playlistRepository.save(new Playlist(musicList,userList));
         Playlist playlist1 = playlistRepository.getById(playlist.getId());
-        Assertions.assertEquals(playlist,playlist1);
+        Assertions.assertEquals(playlist.getId(),playlist1.getId());
     }
 
 

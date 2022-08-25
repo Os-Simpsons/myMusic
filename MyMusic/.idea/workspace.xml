@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/repositories/ArtistRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/repositories/MusicRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyMusic.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyMusic.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Artist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/repositories/MusicRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/repositories/PlaylistRepositoryTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="Alterações nos testes, retirada da anotacao @DataJPATest." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +65,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.MusicRepositoryTest.shouldHaveTheBeatlesMusic">
+  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.shouldStorePlayslist">
     <configuration name="SummitBootcampApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.SummitBootcampApplication" />
       <module name="summit-bootcamp" />
@@ -156,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MusicRepositoryTest.shouldHaveTheBeatlesMusic" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.shouldStorePlayslist" />
+        <item itemvalue="JUnit.MusicRepositoryTest.shouldHaveTheBeatlesMusic" />
         <item itemvalue="JUnit.MusicRepositoryTest" />
         <item itemvalue="JUnit.MusicRepositoryTest.shouldHavePrinceMusics" />
         <item itemvalue="Application.SummitBootcampApplication" />
@@ -173,6 +161,14 @@
       <option name="presentableId" value="Default" />
       <updated>1661444214210</updated>
     </task>
+    <task id="LOCAL-00001" summary="Alterações nos testes, retirada da anotacao @DataJPATest.">
+      <created>1661461496295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661461496295</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,6 +181,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Alterações nos testes, retirada da anotacao @DataJPATest." />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterações nos testes, retirada da anotacao @DataJPATest." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -27,13 +27,6 @@ public class MusicRepositoryTest {
     @Autowired
     MusicRepository musicRepository;
 
-    @Autowired
-    ArtistRepository artistRepository;
-    private List<Playlist> playlistMusic = new ArrayList<>();
-    private List<Music> musicList = new ArrayList<>();
-    Artist artist;
-    Music music;
-
     @Test
     public void shouldHaveTheBeatlesMusic() {
         List<Music> listMusic = musicRepository.getAllMusicArtist("The Beatles");

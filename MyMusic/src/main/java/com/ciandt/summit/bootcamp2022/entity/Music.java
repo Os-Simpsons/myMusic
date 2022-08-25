@@ -29,7 +29,7 @@ public class Music {
     private Artist artistId;
 
     @JsonIgnore
-    @ManyToMany(mappedBy = "musicList",fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "musicList")
     private List<Playlist> playlist = new ArrayList<>();
 
 }
