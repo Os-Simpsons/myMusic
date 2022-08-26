@@ -17,7 +17,7 @@ import java.util.List;
 public class MusicController {
     @Autowired
     MusicService musicService;
-    @ApiOperation(value = "Este request lê os dados de datas e valores das taxas Selic. Também gera um banco de dados no repositório H2.")
+    @ApiOperation(value = "This request reads the values to list the songs and artists")
     @GetMapping
     public ResponseEntity<List<Music>> getAllMusics
             (@RequestParam(value = "name") String name
