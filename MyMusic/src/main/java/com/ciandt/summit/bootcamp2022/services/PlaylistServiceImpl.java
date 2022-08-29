@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.Optional;
 
 @Service
 public class PlaylistServiceImpl implements PlaylistService {
@@ -57,4 +58,26 @@ public class PlaylistServiceImpl implements PlaylistService {
             throw new InvalidLogDataException(e.getMessage());
         }
     }
+
+    @Transactional
+    @Override
+    public void deleteMusicFromPlaylist(String playlistId, String musicId, UsernameDto usernameDto) {
+        try {
+            tokenService.validateToken(usernameDto);
+            Optional<Playlist> playlist = playlistRepository.findById(playlistId);
+            String music = playlistRepository.findMusicByPlaylist(playlistId, musicId);
+            if (playlist.isEmpty()) {
+                throw new ResourceNotFoundException("Playlist not exits!");
+            } else if (music == null) {
+                throw new ResourceNotFoundException("Music doesn't exist in this playlist");
+            }
+            playlistRepository.deleteMusicFromPlaylist(playlistId, musicId);
+            logger.info("Music was excluded from playlist");
+        } catch (InvalidLogDataException e ) {
+            logger.error("Invalid Token name");
+            throw new InvalidLogDataException(e.getMessage());
+        }
+    }
+
+
 }
