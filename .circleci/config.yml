@@ -1,9 +1,0 @@
-orbs:
-  microservices: mgmorbs/microservices@2.2.27
-version: 2.1
-workflows:
-   version: 2
-  build_and_test:
-    jobs:
-      - build
-      - test
