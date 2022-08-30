@@ -10,7 +10,9 @@ import com.ciandt.summit.bootcamp2022.entity.User;
 import com.ciandt.summit.bootcamp2022.services.PlaylistServiceImpl;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
 
+import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import feign.FeignException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,13 +26,14 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
+import static org.mockito.ArgumentMatchers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.ArrayList;
 import java.util.List;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 
-@ExtendWith(SpringExtension.class)
+//@ExtendWith(SpringExtension.class)
 @WebMvcTest(controllers = PlaylistController.class)
 public class PlaylistControllerTest {
 
@@ -102,6 +105,22 @@ public class PlaylistControllerTest {
 
 
         result.andExpect(status().isBadRequest());
+
+    }
+
+    @Test
+    public void shuouldSaveMusicToPlaylistAndReturn401() throws Exception {
+        usernameDto.setData(new Data("joao", ""));
+        Mockito.doThrow(InvalidLogDataException.class).when(playlistService).saveMusicToPlaylist(anyString(), any(MusicDto.class), any(usernameDto.getClass()));
+        String json = objectMapper.writeValueAsString(musicDto);
+        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/musicas", playlistExistingId)
+                .content(json)
+                .contentType(MediaType.APPLICATION_JSON)
+                .header("name", "joao")
+                .header("token", ""));
+
+
+        result.andExpect(status().isUnauthorized());
 
     }
 }
