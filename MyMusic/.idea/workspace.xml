@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +58,22 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn401">
+  <component name="RunManager" selected="JUnit.PlaylistControllerTest">
+    <configuration name="PlaylistControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn201" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
@@ -71,22 +85,6 @@
       <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
       <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
       <option name="METHOD_NAME" value="shuouldSaveMusicToPlaylistAndReturn201" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
-      <option name="METHOD_NAME" value="shuouldSaveMusicToPlaylistAndReturn400" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlaylistControllerTest" />
         <item itemvalue="JUnit.PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn401" />
         <item itemvalue="JUnit.PlaylistServiceImplTest.shouldRertunNotFoundWhenNotExistsPlaylistId" />
         <item itemvalue="JUnit.PlaylistServiceImplTest.shuouldSaveMusicToPlaylist" />
         <item itemvalue="JUnit.PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn201" />
-        <item itemvalue="JUnit.PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn400" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +175,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java</url>
-          <line>112</line>
+          <line>110</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
