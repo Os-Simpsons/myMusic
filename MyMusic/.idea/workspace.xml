@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a286ad6-5e87-4f51-bfac-0179608ee056" name="Changes" comment="" />
+    <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,17 +15,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="main" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,7 +40,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2DXA8pun7Dd17bLqtnfFrE5B90A" />
+  <component name="ProjectId" id="2Dr59Wsq29PeryurrwCtzjuyhYN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,31 +50,112 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/karin/my music/myMusic/MyMusic/src/test&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/miguelj/IdeaProjects/myMusic/TokenProvider&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test" />
-    </key>
-  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install" />
     </option>
   </component>
+  <component name="RunManager" selected="JUnit.PlaylistControllerTest">
+    <configuration name="PlaylistControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn201" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
+      <option name="METHOD_NAME" value="shuouldSaveMusicToPlaylistAndReturn201" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn401" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
+      <option name="METHOD_NAME" value="shuouldSaveMusicToPlaylistAndReturn401" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistServiceImplTest.shouldRertunNotFoundWhenNotExistsPlaylistId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
+      <option name="METHOD_NAME" value="shouldRertunNotFoundWhenNotExistsPlaylistId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistServiceImplTest.shuouldSaveMusicToPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
+      <option name="METHOD_NAME" value="shuouldSaveMusicToPlaylist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PlaylistControllerTest" />
+        <item itemvalue="JUnit.PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn401" />
+        <item itemvalue="JUnit.PlaylistServiceImplTest.shouldRertunNotFoundWhenNotExistsPlaylistId" />
+        <item itemvalue="JUnit.PlaylistServiceImplTest.shuouldSaveMusicToPlaylist" />
+        <item itemvalue="JUnit.PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn201" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2a286ad6-5e87-4f51-bfac-0179608ee056" name="Changes" comment="" />
-      <created>1660834898734</created>
+      <changelist id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="" />
+      <created>1661444214210</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1660834898734</updated>
+      <updated>1661444214210</updated>
     </task>
     <servers />
   </component>
@@ -83,5 +169,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
