@@ -58,7 +58,22 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistControllerTest">
+  <component name="RunManager" selected="JUnit.MusicControllerTest">
+    <configuration name="MusicControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.MusicControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PlaylistControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
@@ -70,22 +85,6 @@
       <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
       <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn201" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
-      <option name="METHOD_NAME" value="shuouldSaveMusicToPlaylistAndReturn201" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MusicControllerTest" />
         <item itemvalue="JUnit.PlaylistControllerTest" />
         <item itemvalue="JUnit.PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn401" />
         <item itemvalue="JUnit.PlaylistServiceImplTest.shouldRertunNotFoundWhenNotExistsPlaylistId" />
         <item itemvalue="JUnit.PlaylistServiceImplTest.shuouldSaveMusicToPlaylist" />
-        <item itemvalue="JUnit.PlaylistControllerTest.shuouldSaveMusicToPlaylistAndReturn201" />
       </list>
     </recent_temporary>
   </component>
