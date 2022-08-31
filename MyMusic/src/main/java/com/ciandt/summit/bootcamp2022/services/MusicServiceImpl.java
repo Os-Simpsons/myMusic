@@ -48,7 +48,7 @@ public class MusicServiceImpl implements MusicService {
 
     private boolean checkWordSize(String name) {
         boolean check = true;
-        if (name.length() <= 3 || name == null) {
+        if (name.length() <= 2 || name == null) {
             check = false;
         }
         return check;
