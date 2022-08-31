@@ -70,7 +70,7 @@ public class MusicServiceImplTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"u2", "nir", "pr"})
+    @CsvSource({"u", "n", "p"})
     void getArtistLessThanThreeCharacters(String name) {
 
         Assertions.assertThrows(ValidateSizeNameException.class, () -> {
