@@ -74,11 +74,11 @@ public class MusicControllerTest {
                 "123456"));
         musicReturned = new Music("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist, playlistMusic);
 
-//        Mockito.doNothing().when(musicService).getMusics(musicDto.getName(), usernameDto);
+
     }
 
     @Test
-    public void shouldReturn400() throws Exception {
+    public void shouldGetMusicAndArtistAndReturn400() throws Exception {
 
 
         doThrow(ValidateSizeNameException.class).when(musicService).getMusics(anyString(),any(usernameDto.getClass()));
@@ -92,7 +92,7 @@ public class MusicControllerTest {
 
 
     @Test
-    public void shouldReturn() throws Exception {
+    public void shouldGetMusicAndArtistAndReturn200() throws Exception {
 
         artist = new Artist("32844fdd-bb76-4c0a-9627-e34ddc9fd892", "The Beatles", musicList2);
         music = new Music("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Shake", artist, playlistMusic);
@@ -112,7 +112,7 @@ public class MusicControllerTest {
 
 
     @Test
-    public void shouldReturn204() throws Exception {
+    public void shouldGetMusicAndArtistAndReturn204() throws Exception {
 
         when(musicService.getMusics(anyString(),any(usernameDto.getClass()))).thenReturn(null);
         this.mockMvc.perform(get("/v1/music").param("name","a")
@@ -123,15 +123,17 @@ public class MusicControllerTest {
     }
 
     @Test
-    public void shouldReturn401() throws Exception {
+    public void shouldGetMusicAndArtistAndReturn401() throws Exception {
 
         doThrow(InvalidLogDataException.class).when(musicService).getMusics(anyString(),any(usernameDto.getClass()));
         this.mockMvc.perform(get("/v1/music").param("name","a")
                 .header("name", "").header("token", "")
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(MockMvcResultMatchers.status().is(SC_UNAUTHORIZED)).andReturn();
 
-
     }
+
+
+
 
 
 }
