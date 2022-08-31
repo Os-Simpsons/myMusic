@@ -35,7 +35,7 @@ public class MusicServiceImpl implements MusicService {
         try {
             tokenService.validateToken(usernameDto);
             if (!checkWordSize(name)) {
-                throw new ValidateSizeNameException("Artist's name mustn't have less than 3 characters");
+                throw new ValidateSizeNameException("Artist's name mustn't have less than 2 characters");
             }
             List<Music> music = musicRepository.getAllMusicArtist(name);
             logger.info("Music/Artist found");
