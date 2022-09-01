@@ -56,8 +56,11 @@ O projeto foi desenvolvido utilizando:
 - Intellij Idea
 - Postman
 - CleanArch
-- Jacoco
+- JaCoCo
 - Microservice
+- PITest
+- Heroku
+- Circle CI
 
 ---
 Acesse a arquitetura do projeto por este [LINK](https://excalidraw.com/#json=EwD3zImwi9fLVGrjz8Unw,CvPYR7BfIL-miljjW-bzkA
@@ -76,11 +79,7 @@ mvn clean install
 
 
 - Para testar os endpoints utilize a documentação como base.
-  Acesse [Swagger](http://localhost:8000/swagger-ui.html)
-  ou [aqui](http://localhost:8000/swagger-ui.html)
-
-
-- Para acessar a URL base do sistema, clique [aqui](http://localhost:8000/swagger-ui.html)
+  Acesse [Swagger](http://localhost:8081/api/swagger-ui.html)
 
 
 ### token-provider
@@ -97,12 +96,12 @@ METODO: POST
 BODY: 
 { 
     "data": {
-        "name": "fulano"
+        "name": "joao"
     }
 }
 RETORNO: 201 Created
 {
-    "12321312321312"
+    "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="
 }
 ```
 
@@ -115,8 +114,8 @@ METODO: POST
 BODY: 
 { 
     "data": {
-        "name": "fulano",
-        "token": "12321312321312"
+        "name": "joao",
+        "token": "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="
     }
 }
 RETORNO: 201 Created
@@ -142,3 +141,27 @@ Dica:
 Não é necessário, porém é possível utilizar uma ferramenta para abrir e visualizar o arquivo MyMusic.db de maneira mais fácil, como:
 
 https://sqlitestudio.pl
+
+# Testes
+
+Para testar as as classes criadas foram realizados os seguintes testes:
+
+<div align="center"><img src="images/Testes.png" title="Testes realizados" alt="Figura com os testes"/></div>
+
+# Jacoco
+
+Para fazer a cobertura de código de foi de 70%, foi utilizado o Java code coverage tools (JaCoCo)
+
+<div align="center"><img src="images/Jacoco.png" title="Cobertura realizada pelo JaCoCo" alt="Figura com a cobertura"/></div>
+
+# PITest
+
+Rode no console o comando para executar o PITest
+```
+mvn org.pitest:pitest-maven:mutationCoverage
+```
+
+<div align="center"><img src="images/Mutation.png" title="Teste de mutação realizado" alt="Figura com o resultado do PITest"/></div>
+
+
+
