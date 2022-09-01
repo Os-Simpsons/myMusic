@@ -4,6 +4,7 @@ package com.ciandt.summit.bootcamp2022.controller;
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.utils.TokenService;
+import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -45,7 +46,7 @@ public class UserControllerTest {
 
 
     @Test
-    public void shouldReturn() throws Exception {
+    public void shouldReturnToken() throws Exception {
 
         Mockito.when(tokenService.createToken(any(UsernameDto.class))).thenReturn("ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA==");
         String json = objectMapper.writeValueAsString(usernameDto);
@@ -54,8 +55,22 @@ public class UserControllerTest {
                 .contentType(MediaType.APPLICATION_JSON));
 
 
-
         result.andExpect(content().string("ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="));
+
+    }
+
+
+    @Test
+    public void shouldReturnInvalidLogDataException() throws Exception {
+
+        Mockito.when(tokenService.createToken(any(UsernameDto.class))).thenThrow(InvalidLogDataException.class);
+        String json = objectMapper.writeValueAsString(usernameDto);
+        ResultActions result = mockMvc.perform(post("/users")
+                .content(json)
+                .contentType(MediaType.APPLICATION_JSON));
+
+
+        result.andExpect(status().isUnauthorized());
 
     }
 }
