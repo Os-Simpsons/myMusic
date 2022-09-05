@@ -1,5 +1,6 @@
 package com.ciandt.summit.bootcamp2022.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,6 +28,11 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "PlaylistId")//Nullable?
+    @JsonIgnore
     private Playlist playlist;
+
+    @ManyToOne
+    @JoinColumn( name = "UserTypeId")
+    private UserType userType;
 
 }
