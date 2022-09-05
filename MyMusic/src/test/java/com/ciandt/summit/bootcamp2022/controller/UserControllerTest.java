@@ -3,6 +3,7 @@ package com.ciandt.summit.bootcamp2022.controller;
 
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
+import com.ciandt.summit.bootcamp2022.services.UserService;
 import com.ciandt.summit.bootcamp2022.utils.TokenService;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -31,6 +32,9 @@ public class UserControllerTest {
     @MockBean
     private TokenService tokenService;
 
+    @MockBean
+    private UserService userService;
+    
     private UsernameDto usernameDto;
 
     @Autowired
