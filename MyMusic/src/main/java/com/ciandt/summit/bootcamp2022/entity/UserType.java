@@ -1,5 +1,6 @@
 package com.ciandt.summit.bootcamp2022.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,6 +29,7 @@ public class UserType {
     private String description;
 
     @OneToMany(mappedBy = "userType")
+    @JsonIgnore
     private List<User> users;
 
 }
