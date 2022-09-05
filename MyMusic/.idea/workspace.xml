@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/UserType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyMusic.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyMusic.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
