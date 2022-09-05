@@ -7,14 +7,16 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.List;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name="Usuarios")
-public class User {
+@Table(name="TipoUsuario")
+public class UserType {
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -22,15 +24,10 @@ public class User {
     @Column(name="Id")
     private String id;
 
-    @Column(name="Nome")
-    private String name;
+    @Column(name="Descricao", columnDefinition = "TEXT")
+    private String description;
 
-    @ManyToOne
-    @JoinColumn(name = "PlaylistId")//Nullable?
-    private Playlist playlist;
-
-    @ManyToOne
-    @JoinColumn( name = "UserTypeId")
-    private UserType userType;
+    @OneToMany(mappedBy = "userType")
+    private List<User> users;
 
 }

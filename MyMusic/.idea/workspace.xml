@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/UserType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/client/TokenFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/client/TokenFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,16 +89,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SummitBootcampApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.SummitBootcampApplicationTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,10 +139,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.SummitBootcampApplication" />
+        <item itemvalue="JUnit.SummitBootcampApplicationTests" />
         <item itemvalue="JUnit.UserControllerTest.shouldReturnInvalidLogDataException" />
         <item itemvalue="JUnit.UserControllerTest.shouldReturn" />
         <item itemvalue="JUnit.MusicControllerTest" />
-        <item itemvalue="JUnit.PlaylistControllerTest" />
       </list>
     </recent_temporary>
   </component>
