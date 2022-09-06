@@ -2,13 +2,17 @@ package com.ciandt.summit.bootcamp2022.controller;
 
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
+import com.ciandt.summit.bootcamp2022.dto.UserDTO;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.services.PlaylistService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.ws.rs.PathParam;
 
 @RestController
 @RequestMapping(value = "/playlist")
@@ -36,5 +40,17 @@ public class PlaylistController {
         UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
         playlistService.deleteMusicFromPlaylist(playlistId, musicaId, usernameDto);
         return ResponseEntity.ok().body("Music was deleted!");
+    }
+
+    @ApiOperation(value = "This endpoint add musics in a playlist after verificate the type of the user.")
+    @PutMapping("/{playlistId}/{userId}/music")
+    @ResponseStatus(value = HttpStatus.CREATED)
+    public ResponseEntity<String> addMusicWithUserVerification(
+            @PathParam(value = "playlistId") String playlistId,
+            @PathParam(value = "musicId") String musicId,
+            @PathVariable String userId
+    ){
+        UserDTO userDTO = new UserDTO();
+        return ResponseEntity.ok().body("Music added!");
     }
 }

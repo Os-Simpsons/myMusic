@@ -52,7 +52,7 @@ public class UserServiceImplTest {
                 "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="));
         userExistsId = "a39926f4-6acb-4497-884f-d4e5296ef652";
         userNoExistsId = "a39926f4-6acb-4497-884f-d4e529";
-        playlist = new Playlist("fe5c979a-469b-4c4b-ab5e-64f72f653ea6", musicList, usersList);
+        playlist = new Playlist("fe5c979a-469b-4c4b-ab5e-64f72f653ea6", musicList, user);
         user = new User("fe5c979a-469b-4c4b-ab5e-64f72f653ea5", "joao", playlist, userType );
         userType = new UserType("1a2c3461-27f8-4976-afa6-8b5e51c024e4", "Comum", usersList);
         userDTO = new UserDTO("fe5c979a-469b-4c4b-ab5e-64f72f653ea5", "joao", userType );

@@ -43,7 +43,7 @@ public class UserControllerTest {
 
     @MockBean
     private UserService userService;
-    
+
     private UsernameDto usernameDto;
 
     @Autowired
@@ -66,9 +66,8 @@ public class UserControllerTest {
 
     @BeforeEach
     void setUp() throws Exception {
-        usernameDto = new UsernameDto(new Data("joao",
-                ""));
-        playlist = new Playlist("fe5c979a-469b-4c4b-ab5e-64f72f653ea6", musicList, usersList);
+        usernameDto = new UsernameDto(new Data("joao", ""));
+        playlist = new Playlist("fe5c979a-469b-4c4b-ab5e-64f72f653ea6", musicList, user);
         user = new User("fe5c979a-469b-4c4b-ab5e-64f72f653ea5", "joao", playlist, userType );
         userType = new UserType("1a2c3461-27f8-4976-afa6-8b5e51c024e4", "Comum", usersList);
         userDTO = new UserDTO("fe5c979a-469b-4c4b-ab5e-64f72f653ea5", "joao", userType );

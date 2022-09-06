@@ -32,11 +32,11 @@ public class Playlist {
     )
     private List<Music> musicList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "playlist")
-    private List<User> usersList = new ArrayList<>();
+    @OneToOne(mappedBy = "playlist")
+    private User user;
 
-    public Playlist(List<Music> musicList, List<User> usersList) {
+    public Playlist(List<Music> musicList, User user) {
         this.musicList = musicList;
-        this.usersList = usersList;
+        this.user = user;
     }
 }

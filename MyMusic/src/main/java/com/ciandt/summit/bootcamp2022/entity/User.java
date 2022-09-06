@@ -26,7 +26,7 @@ public class User {
     @Column(name="Nome")
     private String name;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "PlaylistId")//Nullable?
     @JsonIgnore
     private Playlist playlist;

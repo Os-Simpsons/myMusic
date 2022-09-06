@@ -1,6 +1,7 @@
 package com.ciandt.summit.bootcamp2022.services;
 
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
+import com.ciandt.summit.bootcamp2022.dto.UserDTO;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.entity.Music;
 import com.ciandt.summit.bootcamp2022.entity.Playlist;
@@ -58,6 +59,34 @@ public class PlaylistServiceImpl implements PlaylistService {
             throw new InvalidLogDataException(e.getMessage());
         }
     }
+
+//    @Transactional
+//    @Override
+//    public void saveMusicToPlaylistCheckingUserTpe(MusicDto musicDto, String playlistId, UsernameDto usernameDto) {
+//        try{
+//            tokenService.validateToken(usernameDto);
+//            Playlist playlist = playlistRepository.getById(playlistId);
+//            Music music = musicRepository.getById(musicDto.getId());
+//            for (Music musicFind : playlist.getMusicList()) {
+//                if (musicFind.getId() == music.getId()){
+//                    logger.error("Music Already exist in this playlist.");
+//                    throw new MusicAlreadyExistException("Music Already exist in this playlist.");
+//                }
+//            }
+//
+//            UserDTO userDTO = new UserDTO();
+//            if(userDTO.getName() != "Premium"){
+//                while (playlist.getMusicList().size() <= 5){
+//                    playlist.getMusicList().add(music);
+//                    music.getPlaylist().add(playlist);
+//                    playlistRepository.save(playlist);
+//                }
+//            } else{
+//                playlist.getMusicList().add(music);
+//            }
+//        }
+//    }
+
 
     @Transactional
     @Override
