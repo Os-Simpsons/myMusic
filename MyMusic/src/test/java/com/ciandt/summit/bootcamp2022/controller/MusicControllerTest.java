@@ -3,10 +3,7 @@ package com.ciandt.summit.bootcamp2022.controller;
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
-import com.ciandt.summit.bootcamp2022.entity.Artist;
-import com.ciandt.summit.bootcamp2022.entity.Music;
-import com.ciandt.summit.bootcamp2022.entity.Playlist;
-import com.ciandt.summit.bootcamp2022.entity.User;
+import com.ciandt.summit.bootcamp2022.entity.*;
 import com.ciandt.summit.bootcamp2022.services.MusicServiceImpl;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ValidateSizeNameException;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
@@ -63,10 +60,13 @@ public class MusicControllerTest {
 
     @BeforeEach
     void setUp() throws Exception {
+        UserType userType = new UserType("1a2c3461-27f8-4976-afa6-8b5e51c024e4", "Comum", usersList);
+        User  user = new User("a39926f4-6acb-4497-884f-d4e5296ef652", "Joao", playlist, userType);
+
         playlistExistingId = "a39926f4-6acb-4497-884f-d4e5296ef652";
         playlistNotExistId = "070d9496-ae38-4587-8ca6-2ed9b36fb198";
         musicDTONotExistId = "32844fdd-bb76-4c0a-9627-e34ddc9fd892";
-        playlist = new Playlist(playlistExistingId, musicList, usersList);
+        playlist = new Playlist(playlistExistingId, musicList, user);
         music = new Music("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist, playlistMusic);
         artist = new Artist("32844fdd-bb76-4c0a-9627-e34ddc9fd892", "The Beatles", musicList2);
         musicDto = new MusicDto("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist);

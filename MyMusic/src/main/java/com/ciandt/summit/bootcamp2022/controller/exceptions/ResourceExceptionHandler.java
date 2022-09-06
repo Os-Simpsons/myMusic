@@ -1,5 +1,6 @@
 package com.ciandt.summit.bootcamp2022.controller.exceptions;
 
+import com.ciandt.summit.bootcamp2022.services.exceptions.CommomUserException;
 import com.ciandt.summit.bootcamp2022.services.exceptions.MusicAlreadyExistException;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ValidateSizeNameException;
@@ -58,6 +59,17 @@ public class ResourceExceptionHandler {
         err.setTimestamp(Instant.now());
         err.setStatus(status.value());
         err.setError("Word Size Error!");
+        err.setMessage(e.getMessage());
+        err.setPath(request.getRequestURI());
+        return ResponseEntity.status(status).body(err);
+    }
+    @ExceptionHandler(CommomUserException.class)
+    public ResponseEntity<StandardError> CommomUserException(CommomUserException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.BAD_REQUEST;
+        StandardError err = new StandardError();
+        err.setTimestamp(Instant.now());
+        err.setStatus(status.value());
+        err.setError("Common User error");
         err.setMessage(e.getMessage());
         err.setPath(request.getRequestURI());
         return ResponseEntity.status(status).body(err);

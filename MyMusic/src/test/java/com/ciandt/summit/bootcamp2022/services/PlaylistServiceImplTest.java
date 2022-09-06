@@ -3,10 +3,7 @@ package com.ciandt.summit.bootcamp2022.services;
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
-import com.ciandt.summit.bootcamp2022.entity.Artist;
-import com.ciandt.summit.bootcamp2022.entity.Music;
-import com.ciandt.summit.bootcamp2022.entity.Playlist;
-import com.ciandt.summit.bootcamp2022.entity.User;
+import com.ciandt.summit.bootcamp2022.entity.*;
 import com.ciandt.summit.bootcamp2022.repositories.MusicRepository;
 import com.ciandt.summit.bootcamp2022.repositories.PlaylistRepository;
 import com.ciandt.summit.bootcamp2022.services.exceptions.MusicAlreadyExistException;
@@ -55,17 +52,21 @@ public class PlaylistServiceImplTest {
     private Artist artist;
     private List<Music> musicList = new ArrayList<>();
     private List<User> usersList = new ArrayList<>();
+    private User user;
     private List<Playlist> playlistMusic = new ArrayList<>();
     private List<Music> musicList2 = new ArrayList<>();
 
     private Music musicReturned;
-
+    private UserType userType;
     @BeforeEach
     void setUp() throws Exception {
+        userType = new UserType("1a2c3461-27f8-4976-afa6-8b5e51c024e4", "Comum", usersList);
+        user = new User("a39926f4-6acb-4497-884f-d4e5296ef652", "Joao", playlist, userType);
+
         playlistExistingId = "a39926f4-6acb-4497-884f-d4e5296ef652";
         playlistNotExistId = "070d9496-ae38-4587-8ca6-2ed9b36fb198";
         musicDTONotExistId = "32844fdd-bb76-4c0a-9627-e34ddc9fd892";
-        playlist = new Playlist(playlistExistingId, musicList, usersList);
+        playlist = new Playlist(playlistExistingId, musicList, user);
         artist = new Artist("32844fdd-bb76-4c0a-9627-e34ddc9fd892", "The Beatles", musicList2);
         musicDto = new MusicDto("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist);
         usernameDto = new UsernameDto(new Data("joao",
@@ -87,7 +88,7 @@ public class PlaylistServiceImplTest {
 
     @Test
     public void shouldRertunNotFoundWhenNotExistsPlaylistId() {
-        playlist = new Playlist(playlistNotExistId, musicList, usersList);
+        playlist = new Playlist(playlistNotExistId, musicList, user);
         Mockito.when(playlistRepository.getById(playlistNotExistId)).thenThrow(ResourceNotFoundException.class);
 
         Assertions.assertThrows(ResourceNotFoundException.class, () -> {

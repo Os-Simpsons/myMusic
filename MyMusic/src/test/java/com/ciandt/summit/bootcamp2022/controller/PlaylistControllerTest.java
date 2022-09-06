@@ -64,7 +64,7 @@ public class PlaylistControllerTest {
     private UsernameDto usernameDto;
     private Artist artist;
     private List<Music> musicList = new ArrayList<>();
-    private List<User> usersList = new ArrayList<>();
+    private User usersList;
     private List<Playlist> playlistMusic = new ArrayList<>();
     private List<Music> musicList2 = new ArrayList<>();
 
