@@ -59,7 +59,20 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerTest.shouldReturnUserDTO">
+  <component name="RunManager" selected="Application.SummitBootcampApplication">
+    <configuration name="SummitBootcampApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.SummitBootcampApplication" />
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserControllerTest.shouldReturnInvalidLogDataException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
@@ -71,22 +84,6 @@
       <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
       <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.UserControllerTest" />
       <option name="METHOD_NAME" value="shouldReturnInvalidLogDataException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.shouldReturnToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="shouldReturnToken" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SummitBootcampApplication" />
         <item itemvalue="JUnit.UserControllerTest.shouldReturnUserDTO" />
         <item itemvalue="JUnit.UserControllerTest.shouldReturnUserNotFound" />
         <item itemvalue="JUnit.UserControllerTest.shouldReturnUserInvalidLofDataException" />
         <item itemvalue="JUnit.UserControllerTest.shouldReturnInvalidLogDataException" />
-        <item itemvalue="JUnit.UserControllerTest.shouldReturnToken" />
       </list>
     </recent_temporary>
   </component>
