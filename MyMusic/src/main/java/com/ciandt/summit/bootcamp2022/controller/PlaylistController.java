@@ -46,11 +46,14 @@ public class PlaylistController {
     @PutMapping("/{playlistId}/{userId}/music")
     @ResponseStatus(value = HttpStatus.CREATED)
     public ResponseEntity<String> addMusicWithUserVerification(
-            @PathParam(value = "playlistId") String playlistId,
-            @PathParam(value = "musicId") String musicId,
-            @PathVariable String userId
+            @PathVariable String playlistId,
+            @PathVariable String userId,
+            @RequestBody MusicDto musicDto,
+            @RequestHeader(value = "name") String nome,
+            @RequestHeader(value = "token") String token
     ){
-        UserDTO userDTO = new UserDTO();
+        UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
+        playlistService.saveMusicToPlaylistCheckingUserTpe(playlistId, userId, musicDto, usernameDto);
         return ResponseEntity.ok().body("Music added!");
     }
 }

@@ -12,6 +12,6 @@ public interface PlaylistService {
     @Transactional
     void deleteMusicFromPlaylist(String playlistId, String musicId, UsernameDto usernameDto) throws InvalidLogDataException;
 
-//    @Transactional
-//    void saveMusicToPlaylistCheckingUserTpe(MusicDto musicDto, String playlistId, UsernameDto usernameDto);
+    @Transactional
+    void saveMusicToPlaylistCheckingUserTpe(String playlistId, String userId, MusicDto musicDto, UsernameDto usernameDto) throws InvalidLogDataException;
 }
