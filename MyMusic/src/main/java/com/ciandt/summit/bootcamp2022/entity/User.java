@@ -35,4 +35,5 @@ public class User {
     @JoinColumn( name = "UserTypeId")
     private UserType userType;
 
+
 }
