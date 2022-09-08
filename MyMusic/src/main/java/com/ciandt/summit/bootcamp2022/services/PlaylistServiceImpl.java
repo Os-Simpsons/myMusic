@@ -42,32 +42,6 @@ public class PlaylistServiceImpl implements PlaylistService {
 
     @Transactional
     @Override
-    public void saveMusicToPlaylist(String id, MusicDto musicDto, UsernameDto usernameDto) {
-        try {
-            tokenService.validateToken(usernameDto);
-            Playlist playlist = playlistRepository.getById(id);
-            Music music = musicRepository.getById(musicDto.getId());
-            for (Music musicFind : playlist.getMusicList()) {
-                if (musicFind.getId() == music.getId()){
-                    logger.error("Music Already exist in this playlist.");
-                    throw new MusicAlreadyExistException("Music Already exist in this playlist.");
-                }
-            }
-            playlist.getMusicList().add(music);
-            music.getPlaylist().add(playlist);
-            playlistRepository.save(playlist);
-            logger.info("Music add in the playlist");
-        } catch (EntityNotFoundException e) {
-            logger.error("this Id not exist in database");
-            throw new ResourceNotFoundException("this Id not exist in database");
-        } catch (InvalidLogDataException e ) {
-            logger.error("Invalid Token name");
-            throw new InvalidLogDataException(e.getMessage());
-        }
-    }
-
-    @Transactional
-    @Override
     public void saveMusicToPlaylistCheckingUserTpe(String playlistId, String userId, MusicDto musicDto, UsernameDto usernameDto){
         try{
             tokenService.validateToken(usernameDto);

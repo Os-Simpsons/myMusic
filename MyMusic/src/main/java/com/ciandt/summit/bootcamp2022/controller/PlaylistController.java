@@ -11,8 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.ws.rs.PathParam;
+import java.net.URI;
 
 @RestController
 @RequestMapping(value = "/playlist")
@@ -20,16 +22,6 @@ public class PlaylistController {
 
     @Autowired
     private PlaylistService playlistService;
-    @ApiOperation(value = "This endpoint add musica in a playlist.")
-    @PutMapping("/{playlistId}/musicas")
-    @ResponseStatus(value = HttpStatus.CREATED)
-    public void addMusicToPlaylist(@PathVariable String playlistId
-            , @RequestBody MusicDto musicDto
-            , @RequestHeader(value = "name") String nome
-            , @RequestHeader(value = "token") String token) {
-        UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
-        playlistService.saveMusicToPlaylist(playlistId, musicDto, usernameDto);
-    }
 
     @ApiOperation(value = "this endpoint exclude a music by Id.")
     @DeleteMapping("/{playlistId}/musicas/{musicaId}")
@@ -54,6 +46,7 @@ public class PlaylistController {
     ){
         UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
         playlistService.saveMusicToPlaylistCheckingUserTpe(playlistId, userId, musicDto, usernameDto);
-        return ResponseEntity.ok().body("Music added!");
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{playlistId}/{userId}/music").buildAndExpand(playlistId, userId).toUri();
+        return ResponseEntity.created(uri).body("Music added!");
     }
 }
