@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyMusic.db" beforeDir="false" afterPath="$PROJECT_DIR$/MyMusic.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/PlaylistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/PlaylistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/UserControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,84 +61,82 @@
 }</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn install" />
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistServiceImplTest">
-    <configuration name="PlaylistServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserControllerTest.shouldReturnUserDTO">
+    <configuration name="MusicControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.MusicControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistServiceImplTest.ShouldReturnMusicAlreadyExistExceptionWhenMusicIsAlreadyInPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
-      <option name="METHOD_NAME" value="ShouldReturnMusicAlreadyExistExceptionWhenMusicIsAlreadyInPlaylist" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.PlaylistControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistServiceImplTest.shoudlThrowInvalidLogDataToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SummitBootcampApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
-      <option name="METHOD_NAME" value="shoudlThrowInvalidLogDataToken" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.SummitBootcampApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistServiceImplTest.shuouldReturn400WhenICommom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
-      <option name="METHOD_NAME" value="shuouldReturn400WhenICommom" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistServiceImplTest.shuouldSaveMusicToPlaylistWhenIsPremium" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.shouldReturnUserDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.services.*" />
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.services" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.services.PlaylistServiceImplTest" />
-      <option name="METHOD_NAME" value="shuouldSaveMusicToPlaylistWhenIsPremium" />
+      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="shouldReturnUserDTO" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlaylistServiceImplTest" />
-        <item itemvalue="JUnit.PlaylistServiceImplTest.shuouldReturn400WhenICommom" />
-        <item itemvalue="JUnit.PlaylistServiceImplTest.shuouldSaveMusicToPlaylistWhenIsPremium" />
-        <item itemvalue="JUnit.PlaylistServiceImplTest.ShouldReturnMusicAlreadyExistExceptionWhenMusicIsAlreadyInPlaylist" />
-        <item itemvalue="JUnit.PlaylistServiceImplTest.shoudlThrowInvalidLogDataToken" />
+        <item itemvalue="JUnit.UserControllerTest.shouldReturnUserDTO" />
+        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.PlaylistControllerTest" />
+        <item itemvalue="JUnit.MusicControllerTest" />
+        <item itemvalue="JUnit.SummitBootcampApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -198,5 +194,22 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MyMusic$MusicControllerTest.ic" NAME="MusicControllerTest Coverage Results" MODIFIED="1662663470457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ciandt.summit.bootcamp2022.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MyMusic$SummitBootcampApplicationTests.ic" NAME="SummitBootcampApplicationTests Coverage Results" MODIFIED="1662663437377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ciandt.summit.bootcamp2022.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MyMusic$SummitBootcampApplication.ic" NAME="SummitBootcampApplication Coverage Results" MODIFIED="1662663400131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ciandt.summit.bootcamp2022.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MyMusic$PlaylistControllerTest.ic" NAME="PlaylistControllerTest Coverage Results" MODIFIED="1662663603243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ciandt.summit.bootcamp2022.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MyMusic$UserControllerTest.ic" NAME="UserControllerTest Coverage Results" MODIFIED="1662663625893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ciandt.summit.bootcamp2022.controller.*</FILTER>
+    </SUITE>
   </component>
 </project>

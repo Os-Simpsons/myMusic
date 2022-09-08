@@ -11,8 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.ws.rs.PathParam;
+import java.net.URI;
 
 @RestController
 @RequestMapping(value = "/playlist")
@@ -44,6 +46,7 @@ public class PlaylistController {
     ){
         UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
         playlistService.saveMusicToPlaylistCheckingUserTpe(playlistId, userId, musicDto, usernameDto);
-        return ResponseEntity.ok().body("Music added!");
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{playlistId}/{userId}/music").buildAndExpand(playlistId, userId).toUri();
+        return ResponseEntity.created(uri).body("Music added!");
     }
 }

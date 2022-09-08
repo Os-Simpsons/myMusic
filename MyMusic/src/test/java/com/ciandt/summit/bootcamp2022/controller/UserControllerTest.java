@@ -138,9 +138,11 @@ public class UserControllerTest {
         Mockito.when(userService.getUserById(anyString(), any(UsernameDto.class))).thenReturn(userDTO);
         ResultActions result = mockMvc.perform(get("/users/userId",userExistingId )
                 .header("name", "joao").header("token", "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA==")
-                .contentType(MediaType.APPLICATION_JSON));
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON));
 
         result.andExpect(status().isOk());
+        result.andExpect(jsonPath("$.id").exists());
 
     }
 

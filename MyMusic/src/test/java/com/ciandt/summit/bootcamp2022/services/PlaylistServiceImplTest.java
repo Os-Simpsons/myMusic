@@ -72,7 +72,6 @@ public class PlaylistServiceImplTest {
     @BeforeEach
     void setUp() throws Exception {
         userType = new UserType("1a2c3461-27f8-4976-afa6-8b5e51c024e4", "Comum", usersList);
-
         user = new User("a39926f4-6acb-4497-884f-d4e5296ef652", "Joao", playlist, userType);
         userId = "a39926f4-6acb-4497-884f-d4e5296ef652";
         playlistExistingId = "a39926f4-6acb-4497-884f-d4e52975642";

@@ -3,11 +3,10 @@ package com.ciandt.summit.bootcamp2022.controller;
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
-import com.ciandt.summit.bootcamp2022.entity.Artist;
-import com.ciandt.summit.bootcamp2022.entity.Music;
-import com.ciandt.summit.bootcamp2022.entity.Playlist;
-import com.ciandt.summit.bootcamp2022.entity.User;
+import com.ciandt.summit.bootcamp2022.entity.*;
 import com.ciandt.summit.bootcamp2022.services.PlaylistServiceImpl;
+import com.ciandt.summit.bootcamp2022.services.exceptions.CommomUserException;
+import com.ciandt.summit.bootcamp2022.services.exceptions.MusicAlreadyExistException;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
 
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
@@ -64,11 +63,17 @@ public class PlaylistControllerTest {
     private UsernameDto usernameDto;
     private Artist artist;
     private List<Music> musicList = new ArrayList<>();
-    private User usersList;
     private String userId;
     private List<Playlist> playlistMusic = new ArrayList<>();
     private List<Music> musicList2 = new ArrayList<>();
-
+    private Music music1;
+    private Music music2;
+    private Music music3;
+    private Music music4;
+    private Music music5;
+    private UserType userType;
+    private User user;
+    private List<User> userList;
     private Music musicReturned;
 
 
@@ -77,8 +82,10 @@ public class PlaylistControllerTest {
         playlistExistingId = "a39926f4-6acb-4497-884f-d4e5296ef652";
         playlistNotExistId = "070d9496-ae38-4587-8ca6-2ed9b36fb198";
         musicDTONotExistId = "32844fdd-bb76-4c0a-9627-e34ddc9fd892";
+        userType = new UserType("1a2c3461-27f8-4976-afa6-8b5e51c024e4", "Comum", userList);
+        user = new User("a39926f4-6acb-4497-884f-d4e5296ef652", "Joao", playlist, userType);
         userId = "a39926f4-6acb-4497-884f-d4e5296ef652";
-        playlist = new Playlist(playlistExistingId, musicList, usersList);
+        playlist = new Playlist(playlistExistingId, musicList, user);
         artist = new Artist("32844fdd-bb76-4c0a-9627-e34ddc9fd892", "The Beatles", musicList2);
         musicDto = new MusicDto("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist);
         usernameDto = new UsernameDto(new Data("joao",
@@ -86,13 +93,15 @@ public class PlaylistControllerTest {
         musicReturned = new Music("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist, playlistMusic);
 
         Mockito.doNothing().when(playlistService).saveMusicToPlaylistCheckingUserTpe(playlistExistingId,userId, musicDto,usernameDto);
+
+
     }
 
     @Test
-    public void shouldSaveMusicToPlaylistAndReturn201() throws Exception {
+    public void shouldSaveMusicToPlaylistAndReturn201WhenCommomLess5() throws Exception {
 
         String json = objectMapper.writeValueAsString(musicDto);
-        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/musicas", playlistExistingId)
+        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/{userId}/music", playlistExistingId, userId)
                        .content(json)
                         .contentType(MediaType.APPLICATION_JSON)
                         .header("name", "joao")
@@ -104,13 +113,74 @@ public class PlaylistControllerTest {
     }
 
     @Test
-    public void shouldSaveMusicToPlaylistAndReturn400() throws Exception {
-        Mockito.doThrow(ResourceNotFoundException.class).when(playlistService).saveMusicToPlaylistCheckingUserTpe(playlistNotExistId,userId, musicDto, usernameDto);
-        musicDto.setName(null);
-        musicDto.setId(null);
-        musicDto.setArtist(null);
+    public void shouldSaveMusicToPlaylistAndReturn201WhenPremum() throws Exception {
+        user.getUserType().setDescription("Premium");
+        Mockito.doNothing().when(playlistService).saveMusicToPlaylistCheckingUserTpe(playlistExistingId, userId, musicDto, usernameDto);
+
         String json = objectMapper.writeValueAsString(musicDto);
-        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/musicas", playlistNotExistId)
+        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/{userId}/music", playlistExistingId, userId)
+                .content(json)
+                .contentType(MediaType.APPLICATION_JSON)
+                .header("name", "joao")
+                .header("token", "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="));
+
+
+        result.andExpect(status().isCreated());
+
+    }
+
+    @Test
+    public void shouldSaveMusicToPlaylistAndReturn400WhenCommomPlus5() throws Exception {
+
+        Mockito.doThrow(CommomUserException.class).when(playlistService).saveMusicToPlaylistCheckingUserTpe(playlistExistingId, userId, musicDto, usernameDto);
+        String json = objectMapper.writeValueAsString(musicDto);
+        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/{userId}/music", playlistExistingId, userId)
+                .content(json)
+                .contentType(MediaType.APPLICATION_JSON)
+                .header("name", "joao")
+                .header("token", "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="));
+
+
+        result.andExpect(status().isCreated());
+
+    }
+
+    @Test
+    public void shouldSaveMusicToPlaylistAndReturn400WhenPlaylistNotExist() throws Exception {
+        Mockito.doThrow(ResourceNotFoundException.class).when(playlistService).saveMusicToPlaylistCheckingUserTpe(anyString(), anyString(), any(MusicDto.class), any(usernameDto.getClass()));
+        String json = objectMapper.writeValueAsString(musicDto);
+        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/{userId}/music", playlistNotExistId, userId)
+                .content(json)
+                .contentType(MediaType.APPLICATION_JSON)
+                .header("name", "joao")
+                .header("token", "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="));
+
+
+        result.andExpect(status().isBadRequest());
+
+    }
+
+    @Test
+    public void shouldSaveMusicToPlaylistAndReturn400WhenMusicNotExist() throws Exception {
+        Mockito.doThrow(ResourceNotFoundException.class).when(playlistService).saveMusicToPlaylistCheckingUserTpe(anyString(), anyString(), any(MusicDto.class), any(usernameDto.getClass()));
+        String json = objectMapper.writeValueAsString(musicDto);
+        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/{userId}/music", playlistExistingId, userId)
+                .content(json)
+                .contentType(MediaType.APPLICATION_JSON)
+                .header("name", "joao")
+                .header("token", "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="));
+
+
+        result.andExpect(status().isBadRequest());
+
+    }
+
+    @Test
+    public void shouldSaveMusicToPlaylistAndReturn400WhenMusicAlreadyExistInPlaylist() throws Exception {
+        Mockito.doThrow(MusicAlreadyExistException.class).when(playlistService).saveMusicToPlaylistCheckingUserTpe(anyString(), anyString(), any(MusicDto.class), any(usernameDto.getClass()));
+        String json = objectMapper.writeValueAsString(musicDto);
+        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/{userId}/music", playlistExistingId, userId)
+                .content(json)
                 .contentType(MediaType.APPLICATION_JSON)
                 .header("name", "joao")
                 .header("token", "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="));
@@ -125,7 +195,7 @@ public class PlaylistControllerTest {
         usernameDto.setData(new Data("joao", ""));
         Mockito.doThrow(InvalidLogDataException.class).when(playlistService).saveMusicToPlaylistCheckingUserTpe(anyString(), anyString(), any(MusicDto.class), any(usernameDto.getClass()));
         String json = objectMapper.writeValueAsString(musicDto);
-        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/musicas", playlistExistingId)
+        ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/{userId}/music", playlistNotExistId, userId)
                 .content(json)
                 .contentType(MediaType.APPLICATION_JSON)
                 .header("name", "joao")
@@ -210,11 +280,7 @@ public class PlaylistControllerTest {
 
     }
 
-
-
-
-
-     }
+}
 
 
 
