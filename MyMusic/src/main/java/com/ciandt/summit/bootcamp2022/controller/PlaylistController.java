@@ -20,16 +20,6 @@ public class PlaylistController {
 
     @Autowired
     private PlaylistService playlistService;
-    @ApiOperation(value = "This endpoint add musica in a playlist.")
-    @PutMapping("/{playlistId}/musicas")
-    @ResponseStatus(value = HttpStatus.CREATED)
-    public void addMusicToPlaylist(@PathVariable String playlistId
-            , @RequestBody MusicDto musicDto
-            , @RequestHeader(value = "name") String nome
-            , @RequestHeader(value = "token") String token) {
-        UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
-        playlistService.saveMusicToPlaylist(playlistId, musicDto, usernameDto);
-    }
 
     @ApiOperation(value = "this endpoint exclude a music by Id.")
     @DeleteMapping("/{playlistId}/musicas/{musicaId}")

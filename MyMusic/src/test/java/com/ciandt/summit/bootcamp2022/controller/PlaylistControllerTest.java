@@ -65,6 +65,7 @@ public class PlaylistControllerTest {
     private Artist artist;
     private List<Music> musicList = new ArrayList<>();
     private User usersList;
+    private String userId;
     private List<Playlist> playlistMusic = new ArrayList<>();
     private List<Music> musicList2 = new ArrayList<>();
 
@@ -76,6 +77,7 @@ public class PlaylistControllerTest {
         playlistExistingId = "a39926f4-6acb-4497-884f-d4e5296ef652";
         playlistNotExistId = "070d9496-ae38-4587-8ca6-2ed9b36fb198";
         musicDTONotExistId = "32844fdd-bb76-4c0a-9627-e34ddc9fd892";
+        userId = "a39926f4-6acb-4497-884f-d4e5296ef652";
         playlist = new Playlist(playlistExistingId, musicList, usersList);
         artist = new Artist("32844fdd-bb76-4c0a-9627-e34ddc9fd892", "The Beatles", musicList2);
         musicDto = new MusicDto("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist);
@@ -83,7 +85,7 @@ public class PlaylistControllerTest {
                 "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="));
         musicReturned = new Music("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist, playlistMusic);
 
-        Mockito.doNothing().when(playlistService).saveMusicToPlaylist(playlistExistingId, musicDto,usernameDto);
+        Mockito.doNothing().when(playlistService).saveMusicToPlaylistCheckingUserTpe(playlistExistingId,userId, musicDto,usernameDto);
     }
 
     @Test
@@ -103,7 +105,7 @@ public class PlaylistControllerTest {
 
     @Test
     public void shouldSaveMusicToPlaylistAndReturn400() throws Exception {
-        Mockito.doThrow(ResourceNotFoundException.class).when(playlistService).saveMusicToPlaylist(playlistNotExistId, musicDto, usernameDto);
+        Mockito.doThrow(ResourceNotFoundException.class).when(playlistService).saveMusicToPlaylistCheckingUserTpe(playlistNotExistId,userId, musicDto, usernameDto);
         musicDto.setName(null);
         musicDto.setId(null);
         musicDto.setArtist(null);
@@ -121,7 +123,7 @@ public class PlaylistControllerTest {
     @Test
     public void shouldSaveMusicToPlaylistAndReturn401() throws Exception {
         usernameDto.setData(new Data("joao", ""));
-        Mockito.doThrow(InvalidLogDataException.class).when(playlistService).saveMusicToPlaylist(anyString(), any(MusicDto.class), any(usernameDto.getClass()));
+        Mockito.doThrow(InvalidLogDataException.class).when(playlistService).saveMusicToPlaylistCheckingUserTpe(anyString(), anyString(), any(MusicDto.class), any(usernameDto.getClass()));
         String json = objectMapper.writeValueAsString(musicDto);
         ResultActions result = mockMvc.perform(put("/playlist/{playlistId}/musicas", playlistExistingId)
                 .content(json)
