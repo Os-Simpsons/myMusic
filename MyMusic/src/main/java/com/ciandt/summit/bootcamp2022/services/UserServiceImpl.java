@@ -28,9 +28,8 @@ public class UserServiceImpl implements UserService{
 
     @Transactional
     @Override
-    public UserDTO getUserById(String id, UsernameDto usernameDto) {
+    public UserDTO getUserById(String id) {
         try {
-            tokenService.validateToken(usernameDto);
             User user = userRepository.getById(id);
             UserDTO dto = new UserDTO(user);
             return dto;

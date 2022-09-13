@@ -26,7 +26,7 @@ public class TokenService {
         return tokenFeignClient.createToken(usernameDto);
     }
 
-    public void validateToken(UsernameDto usernameDto) throws InvalidLogDataException {
+    public boolean validateToken(UsernameDto usernameDto) throws InvalidLogDataException {
         try {
             if(!validateUserName(usernameDto.getData().getName())) {
                 throw new InvalidLogDataException("Invalid Username!");
@@ -37,7 +37,7 @@ public class TokenService {
         } catch (FeignException e) {
             throw new InvalidLogDataException("Invalid or Expired Token!");
         }
-
+        return true;
     }
 
     public boolean validateUserName(String username) {

@@ -5,5 +5,5 @@ import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 
 public interface UserService {
 
-    UserDTO getUserById(String id, UsernameDto usernameDto);
+    UserDTO getUserById(String id);
 }

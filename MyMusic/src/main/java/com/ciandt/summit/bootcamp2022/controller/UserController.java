@@ -30,12 +30,8 @@ public class UserController {
 
     @ApiOperation(value = "This request get User by Id")
     @GetMapping("/{userId}")
-    public ResponseEntity<UserDTO> getUserById(@PathVariable String userId
-            , @RequestHeader(value = "name") String nome
-            , @RequestHeader(value = "token") String token) {
-
-        UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
-        UserDTO dto = userService.getUserById(userId, usernameDto);
+    public ResponseEntity<UserDTO> getUserById(@PathVariable String userId) {
+        UserDTO dto = userService.getUserById(userId);
         return ResponseEntity.ok().body(dto);
     }
 }
