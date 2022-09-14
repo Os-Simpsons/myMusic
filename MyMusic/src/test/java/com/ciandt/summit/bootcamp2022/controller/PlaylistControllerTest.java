@@ -1,5 +1,6 @@
 package com.ciandt.summit.bootcamp2022.controller;
 
+import com.ciandt.summit.bootcamp2022.config.Interceptor;
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
@@ -50,6 +51,8 @@ public class PlaylistControllerTest {
     @MockBean
     private PlaylistServiceImpl playlistService;
 
+    @MockBean
+    private Interceptor interceptor;
     @Autowired
     private ObjectMapper objectMapper;
     private String playlistExistingId;
@@ -93,8 +96,7 @@ public class PlaylistControllerTest {
         musicReturned = new Music("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist, playlistMusic);
 
         Mockito.doNothing().when(playlistService).saveMusicToPlaylistCheckingUserTpe(playlistExistingId,userId, musicDto);
-
-
+        Mockito.doCallRealMethod().when(interceptor).preHandle(any(), any(), any());
     }
 
     @Test
@@ -106,7 +108,6 @@ public class PlaylistControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .header("name", "joao")
                 .header("token", "ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA=="));
-
 
         result.andExpect(status().isCreated());
 

@@ -1,20 +1,14 @@
 package com.ciandt.summit.bootcamp2022.services;
 
-import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.entity.Music;
 import com.ciandt.summit.bootcamp2022.repositories.MusicRepository;
-import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ValidateSizeNameException;
-import com.ciandt.summit.bootcamp2022.utils.TokenService;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import javax.ws.rs.core.Response;
 import java.util.List;
 
 import static javax.ws.rs.core.Response.status;
@@ -26,9 +20,6 @@ public class MusicServiceImpl implements MusicService {
     private MusicRepository musicRepository;
 
     private static Logger logger = LogManager.getLogger(MusicServiceImpl.class);
-
-    @Autowired
-    private TokenService tokenService;
 
     @Override
     public List<Music> getMusics(String name) {
