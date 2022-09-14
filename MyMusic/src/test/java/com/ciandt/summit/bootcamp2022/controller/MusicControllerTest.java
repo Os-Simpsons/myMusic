@@ -1,5 +1,6 @@
 package com.ciandt.summit.bootcamp2022.controller;
 
+import com.ciandt.summit.bootcamp2022.config.Interceptor;
 import com.ciandt.summit.bootcamp2022.dto.Data;
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
 import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
@@ -10,6 +11,7 @@ import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -38,6 +40,9 @@ public class MusicControllerTest {
 
     @MockBean
     private MusicServiceImpl musicService ;
+
+    @MockBean
+    private Interceptor interceptor;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -73,6 +78,7 @@ public class MusicControllerTest {
         usernameDto = new UsernameDto(new Data("joao",
                 "123456"));
         musicReturned = new Music("67f5976c-eb1e-404e-8220-2c2a8a23be47", "Hippy Hippy Shake", artist, playlistMusic);
+        Mockito.doCallRealMethod().when(interceptor).preHandle(any(), any(), any());
 
 
     }
@@ -121,19 +127,5 @@ public class MusicControllerTest {
 
 
     }
-
-    @Test
-    public void shouldGetMusicAndArtistAndReturn401() throws Exception {
-
-        doThrow(InvalidLogDataException.class).when(musicService).getMusics(anyString());
-        this.mockMvc.perform(get("/v1/music").param("name","a")
-                .header("name", "").header("token", "")
-                .contentType(MediaType.APPLICATION_JSON)).andExpect(MockMvcResultMatchers.status().is(SC_UNAUTHORIZED)).andReturn();
-
-    }
-
-
-
-
-
+    
 }

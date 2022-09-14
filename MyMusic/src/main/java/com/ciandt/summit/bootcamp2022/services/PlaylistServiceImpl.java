@@ -1,8 +1,6 @@
 package com.ciandt.summit.bootcamp2022.services;
 
 import com.ciandt.summit.bootcamp2022.dto.MusicDto;
-import com.ciandt.summit.bootcamp2022.dto.UserDTO;
-import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.entity.Music;
 import com.ciandt.summit.bootcamp2022.entity.Playlist;
 import com.ciandt.summit.bootcamp2022.entity.User;
@@ -12,7 +10,6 @@ import com.ciandt.summit.bootcamp2022.repositories.UserRepository;
 import com.ciandt.summit.bootcamp2022.services.exceptions.CommomUserException;
 import com.ciandt.summit.bootcamp2022.services.exceptions.MusicAlreadyExistException;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
-import com.ciandt.summit.bootcamp2022.utils.TokenService;
 import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,9 +31,6 @@ public class PlaylistServiceImpl implements PlaylistService {
 
     @Autowired
     private UserRepository userRepository;
-
-    @Autowired
-    private TokenService tokenService;
 
     private static Logger logger = LogManager.getLogger(PlaylistServiceImpl.class);
 

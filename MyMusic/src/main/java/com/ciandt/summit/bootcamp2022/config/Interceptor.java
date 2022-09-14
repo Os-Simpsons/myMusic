@@ -21,7 +21,7 @@ public class Interceptor implements HandlerInterceptor {
     @Autowired
     private TokenFeignClient tokenFeignClient;
 
-    private static Logger logger = LogManager.getLogger(PlaylistServiceImpl.class);
+    private static Logger logger = LogManager.getLogger(Interceptor.class);
 
     @Override
     public boolean preHandle (HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

@@ -6,8 +6,6 @@ import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.entity.*;
 import com.ciandt.summit.bootcamp2022.repositories.UserRepository;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
-import com.ciandt.summit.bootcamp2022.utils.TokenService;
-import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,9 +23,6 @@ public class UserServiceImplTest {
 
     @InjectMocks
     private UserServiceImpl serviceImpl;
-
-    @Mock
-    private TokenService tokenService;
 
     @Mock
     private UserRepository userRepository;

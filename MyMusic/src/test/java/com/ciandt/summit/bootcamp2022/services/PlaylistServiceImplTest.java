@@ -11,8 +11,6 @@ import com.ciandt.summit.bootcamp2022.repositories.UserRepository;
 import com.ciandt.summit.bootcamp2022.services.exceptions.CommomUserException;
 import com.ciandt.summit.bootcamp2022.services.exceptions.MusicAlreadyExistException;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
-import com.ciandt.summit.bootcamp2022.utils.TokenService;
-import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,7 +18,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.ArrayList;
