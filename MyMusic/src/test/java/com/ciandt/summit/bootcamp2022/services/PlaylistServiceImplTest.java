@@ -42,9 +42,6 @@ public class PlaylistServiceImplTest {
     @Mock
     private MusicRepository musicRepository;
 
-    @Mock
-    private TokenService tokenService;
-
     private String playlistExistingId;
     private String playlistNotExistId;
     private UserDTO userDTO;
@@ -94,15 +91,14 @@ public class PlaylistServiceImplTest {
         Mockito.when(userRepository.getById(userId)).thenReturn(user);
         Mockito.when(playlistRepository.getById(playlistExistingId)).thenReturn(playlist);
         Mockito.when(musicRepository.getById(musicDto.getId())).thenReturn(musicReturned);
-        Mockito.when(tokenService.createToken(usernameDto)).thenReturn("ZIIKXbvDLcs30v/7nzGxxwRHW6AHBEp94vEtSCFGZqK8ojfKYv39J92PI5Tw9EIHZLhtGJUaY2KZHwysFlfWvA==");
-        Mockito.doNothing().when(tokenService).validateToken(usernameDto);
+
 
     }
 
     @Test
     public void shuouldSaveMusicToPlaylistWhenCommomLess5() {
         Assertions.assertDoesNotThrow(() -> {
-            playlistService.saveMusicToPlaylistCheckingUserTpe(playlist.getId(),userId, musicDto, usernameDto);
+            playlistService.saveMusicToPlaylistCheckingUserTpe(playlist.getId(),userId, musicDto);
         });
     }
 
@@ -116,7 +112,7 @@ public class PlaylistServiceImplTest {
         playlist.getMusicList().add(music5);
 
         Assertions.assertDoesNotThrow(() -> {
-            playlistService.saveMusicToPlaylistCheckingUserTpe(playlist.getId(),userId, musicDto, usernameDto);
+            playlistService.saveMusicToPlaylistCheckingUserTpe(playlist.getId(),userId, musicDto);
         });
     }
 
@@ -129,7 +125,7 @@ public class PlaylistServiceImplTest {
         playlist.getMusicList().add(music5);
 
         Assertions.assertThrows(CommomUserException.class, () -> {
-            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistExistingId, userId, musicDto, usernameDto);
+            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistExistingId, userId, musicDto);
         });
     }
     @Test
@@ -138,7 +134,7 @@ public class PlaylistServiceImplTest {
         Mockito.when(playlistRepository.getById(playlistNotExistId)).thenThrow(ResourceNotFoundException.class);
 
         Assertions.assertThrows(ResourceNotFoundException.class, () -> {
-            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistNotExistId, userId, musicDto, usernameDto);
+            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistNotExistId, userId, musicDto);
         });
     }
 
@@ -148,17 +144,7 @@ public class PlaylistServiceImplTest {
         Mockito.when(musicRepository.getById(musicDto.getId())).thenThrow(ResourceNotFoundException.class);
 
         Assertions.assertThrows(ResourceNotFoundException.class, () -> {
-            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistNotExistId, userId, musicDto, usernameDto);
-        });
-    }
-
-    @Test
-    public void ShouldReturnInvalidLogDataExceptionWhenInvalidToken() {
-        usernameDto.getData().setToken("");
-        Mockito.doThrow(InvalidLogDataException.class).when(tokenService).validateToken(usernameDto);
-
-        Assertions.assertThrows(InvalidLogDataException.class, () -> {
-            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistNotExistId, userId, musicDto, usernameDto);
+            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistNotExistId, userId, musicDto);
         });
     }
 
@@ -167,7 +153,7 @@ public class PlaylistServiceImplTest {
         playlist.getMusicList().add(musicReturned);
 
         Assertions.assertThrows(MusicAlreadyExistException.class, () -> {
-            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistExistingId, userId, musicDto, usernameDto);
+            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistExistingId, userId, musicDto);
         });
 
         Mockito.verify(musicRepository, Mockito.times(1)).getById(musicDto.getId());
@@ -183,7 +169,7 @@ public class PlaylistServiceImplTest {
                 .findMusicByPlaylist(Mockito.anyString(), Mockito.anyString());
 
         Assertions.assertDoesNotThrow(() -> {
-            playlistService.deleteMusicFromPlaylist(playlistExistingId, musicDto.getId(), usernameDto);
+            playlistService.deleteMusicFromPlaylist(playlistExistingId, musicDto.getId());
         });
     }
 
@@ -195,7 +181,7 @@ public class PlaylistServiceImplTest {
                 .findMusicByPlaylist(Mockito.anyString(), Mockito.anyString());
 
         Assertions.assertThrows(ResourceNotFoundException.class, () -> {
-            playlistService.deleteMusicFromPlaylist(playlistNotExistId, musicDto.getId(), usernameDto);
+            playlistService.deleteMusicFromPlaylist(playlistNotExistId, musicDto.getId());
         });
     }
 
@@ -210,17 +196,9 @@ public class PlaylistServiceImplTest {
                 .findMusicByPlaylist(Mockito.anyString(), Mockito.anyString());
 
         Assertions.assertThrows(ResourceNotFoundException.class, () -> {
-            playlistService.deleteMusicFromPlaylist(playlistExistingId, musicDto.getId(), usernameDto);
+            playlistService.deleteMusicFromPlaylist(playlistExistingId, musicDto.getId());
         });
 
     }
 
-    @Test
-    public void shoudlThrowInvalidLogDataToken() {
-        Mockito.doThrow(InvalidLogDataException.class).when(tokenService).validateToken(Mockito.any(UsernameDto.class));
-
-        Assertions.assertThrows(InvalidLogDataException.class, () -> {
-            playlistService.saveMusicToPlaylistCheckingUserTpe(playlistNotExistId, userId, musicDto, usernameDto);
-        });
-    }
 }

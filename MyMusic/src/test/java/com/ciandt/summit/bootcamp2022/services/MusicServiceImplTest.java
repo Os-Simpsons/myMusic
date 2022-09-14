@@ -32,9 +32,6 @@ public class MusicServiceImplTest {
     @Mock
     private MusicRepository musicRepository;
 
-    @Mock
-    private TokenService tokenService;
-
     private UsernameDto usernameDto;
 
     static List<Music> nirvanaMusic = Arrays.asList(
@@ -64,7 +61,7 @@ public class MusicServiceImplTest {
                 .when(musicRepository)
                 .getAllMusicArtist(Mockito.anyString());
 
-        List<Music> result = musicService.getMusics(name, usernameDto);
+        List<Music> result = musicService.getMusics(name);
 
         Assertions.assertArrayEquals(expected.toArray(), result.toArray());
     }
@@ -74,17 +71,8 @@ public class MusicServiceImplTest {
     void getArtistLessThanThreeCharacters(String name) {
 
         Assertions.assertThrows(ValidateSizeNameException.class, () -> {
-            musicService.getMusics(name, usernameDto);
+            musicService.getMusics(name);
         });
     }
 
-    @Test
-    void shouldThrowInvalidLogDataException() {
-
-        Mockito.doThrow(InvalidLogDataException.class).when(tokenService).validateToken(Mockito.any(UsernameDto.class));
-
-        Assertions.assertThrows(InvalidLogDataException.class, () -> {
-            musicService.getMusics("Nirvana", new UsernameDto());
-        });
-    }
 }

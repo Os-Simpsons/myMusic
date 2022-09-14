@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface MusicService {
 
-    List<Music> getMusics(String name, UsernameDto usernameDto);
+    List<Music> getMusics(String name);
 
 
 }

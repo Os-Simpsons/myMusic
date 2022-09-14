@@ -20,11 +20,8 @@ public class MusicController {
     @ApiOperation(value = "This request reads the values to list the songs and artists")
     @GetMapping
     public ResponseEntity<List<Music>> getAllMusics
-            (@RequestParam(value = "name") String name
-                    , @RequestHeader(value = "name") String nome
-                    , @RequestHeader(value = "token") String token) {
-        UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
-        List<Music> music = musicService.getMusics(name, usernameDto);
+            (@RequestParam(value = "name") String name) {
+        List<Music> music = musicService.getMusics(name);
         if (music == null || music.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }

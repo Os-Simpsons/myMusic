@@ -56,31 +56,23 @@ public class UserServiceImplTest {
         user = new User("fe5c979a-469b-4c4b-ab5e-64f72f653ea5", "joao", playlist, userType );
         userType = new UserType("1a2c3461-27f8-4976-afa6-8b5e51c024e4", "Comum", usersList);
         userDTO = new UserDTO("fe5c979a-469b-4c4b-ab5e-64f72f653ea5", "joao", userType );
-        Mockito.doNothing().when(tokenService).validateToken(usernameDto);
+
     }
 
     @Test
     void shouldReturn400WhenUserNotExist() {
         Mockito.when(userRepository.getById(userNoExistsId)).thenThrow(ResourceNotFoundException.class);
         Assertions.assertThrows(ResourceNotFoundException.class, () -> {
-            serviceImpl.getUserById(userNoExistsId, usernameDto);
+            serviceImpl.getUserById(userNoExistsId);
         });
     }
 
-    @Test
-    void shouldReturn401WhenTokenIsNotValid() {
-        Mockito.doThrow(InvalidLogDataException.class).when(tokenService).validateToken(usernameDto);
-        Mockito.when(userRepository.getById(userExistsId)).thenReturn(user);
-        Assertions.assertThrows(InvalidLogDataException.class, () -> {
-            serviceImpl.getUserById(userExistsId, usernameDto);
-        });
-    }
 
     @Test
     void shouldReturn200WhenUserExists() {
         Mockito.when(userRepository.getById(userExistsId)).thenReturn(user);
         Assertions.assertDoesNotThrow(() -> {
-            serviceImpl.getUserById(userExistsId, usernameDto);
+            serviceImpl.getUserById(userExistsId);
         });
     }
 

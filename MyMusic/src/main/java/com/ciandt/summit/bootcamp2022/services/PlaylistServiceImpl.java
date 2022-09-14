@@ -42,9 +42,8 @@ public class PlaylistServiceImpl implements PlaylistService {
 
     @Transactional
     @Override
-    public void saveMusicToPlaylistCheckingUserTpe(String playlistId, String userId, MusicDto musicDto, UsernameDto usernameDto){
+    public void saveMusicToPlaylistCheckingUserTpe(String playlistId, String userId, MusicDto musicDto){
         try{
-            tokenService.validateToken(usernameDto);
             User user = userRepository.getById(userId);
             if(user == null){
                 throw new ResourceNotFoundException("User does not existent in the database");
@@ -81,9 +80,8 @@ public class PlaylistServiceImpl implements PlaylistService {
 
     @Transactional
     @Override
-    public void deleteMusicFromPlaylist(String playlistId, String musicId, UsernameDto usernameDto) {
+    public void deleteMusicFromPlaylist(String playlistId, String musicId) {
         try {
-            tokenService.validateToken(usernameDto);
             Optional<Playlist> playlist = playlistRepository.findById(playlistId);
             String music = playlistRepository.findMusicByPlaylist(playlistId, musicId);
             if (playlist.isEmpty()) {

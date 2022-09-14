@@ -31,9 +31,8 @@ public class MusicServiceImpl implements MusicService {
     private TokenService tokenService;
 
     @Override
-    public List<Music> getMusics(String name, UsernameDto usernameDto) {
+    public List<Music> getMusics(String name) {
         try {
-            tokenService.validateToken(usernameDto);
             if (!checkWordSize(name)) {
                 throw new ValidateSizeNameException("Artist's name mustn't have less than 2 characters");
             }

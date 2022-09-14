@@ -81,7 +81,7 @@ public class MusicControllerTest {
     public void shouldGetMusicAndArtistAndReturn400() throws Exception {
 
 
-        doThrow(ValidateSizeNameException.class).when(musicService).getMusics(anyString(),any(usernameDto.getClass()));
+        doThrow(ValidateSizeNameException.class).when(musicService).getMusics(anyString());
         this.mockMvc.perform(get("/v1/music").param("name","a")
                 .header("name", "joao").header("token", "123456")
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(MockMvcResultMatchers.status().is(SC_BAD_REQUEST)).andReturn();
@@ -102,7 +102,7 @@ public class MusicControllerTest {
 
         allmusic.add(music);
 
-        when(musicService.getMusics(anyString(),any(usernameDto.getClass()))).thenReturn(allmusic);
+        when(musicService.getMusics(anyString())).thenReturn(allmusic);
         this.mockMvc.perform(get("/v1/music").param("name","Shake")
                         .header("name", "joao").header("token", "123456"))
                 .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
@@ -114,7 +114,7 @@ public class MusicControllerTest {
     @Test
     public void shouldGetMusicAndArtistAndReturn204() throws Exception {
 
-        when(musicService.getMusics(anyString(),any(usernameDto.getClass()))).thenReturn(null);
+        when(musicService.getMusics(anyString())).thenReturn(null);
         this.mockMvc.perform(get("/v1/music").param("name","a")
                 .header("name", "joao").header("token", "123456")
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(MockMvcResultMatchers.status().is(SC_NO_CONTENT)).andReturn();
@@ -125,7 +125,7 @@ public class MusicControllerTest {
     @Test
     public void shouldGetMusicAndArtistAndReturn401() throws Exception {
 
-        doThrow(InvalidLogDataException.class).when(musicService).getMusics(anyString(),any(usernameDto.getClass()));
+        doThrow(InvalidLogDataException.class).when(musicService).getMusics(anyString());
         this.mockMvc.perform(get("/v1/music").param("name","a")
                 .header("name", "").header("token", "")
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(MockMvcResultMatchers.status().is(SC_UNAUTHORIZED)).andReturn();

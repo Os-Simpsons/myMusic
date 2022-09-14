@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 public interface PlaylistService {
 
     @Transactional
-    void deleteMusicFromPlaylist(String playlistId, String musicId, UsernameDto usernameDto) throws InvalidLogDataException;
+    void deleteMusicFromPlaylist(String playlistId, String musicId) throws InvalidLogDataException;
 
     @Transactional
-    void saveMusicToPlaylistCheckingUserTpe(String playlistId, String userId, MusicDto musicDto, UsernameDto usernameDto) throws InvalidLogDataException;
+    void saveMusicToPlaylistCheckingUserTpe(String playlistId, String userId, MusicDto musicDto) throws InvalidLogDataException;
 }

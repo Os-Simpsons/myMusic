@@ -26,11 +26,8 @@ public class PlaylistController {
     @ApiOperation(value = "this endpoint exclude a music by Id.")
     @DeleteMapping("/{playlistId}/musicas/{musicaId}")
     public ResponseEntity<String> deleteMusicFromPlaylist(@PathVariable String playlistId
-            , @PathVariable String musicaId
-            , @RequestHeader(value = "name") String nome
-            , @RequestHeader(value = "token") String token) {
-        UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
-        playlistService.deleteMusicFromPlaylist(playlistId, musicaId, usernameDto);
+            , @PathVariable String musicaId) {
+        playlistService.deleteMusicFromPlaylist(playlistId, musicaId);
         return ResponseEntity.ok().body("Music was deleted!");
     }
 
@@ -40,12 +37,9 @@ public class PlaylistController {
     public ResponseEntity<String> addMusicWithUserVerification(
             @PathVariable String playlistId,
             @PathVariable String userId,
-            @RequestBody MusicDto musicDto,
-            @RequestHeader(value = "name") String nome,
-            @RequestHeader(value = "token") String token
+            @RequestBody MusicDto musicDto
     ){
-        UsernameDto usernameDto = new UsernameDto(new Data(nome, token));
-        playlistService.saveMusicToPlaylistCheckingUserTpe(playlistId, userId, musicDto, usernameDto);
+        playlistService.saveMusicToPlaylistCheckingUserTpe(playlistId, userId, musicDto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{playlistId}/{userId}/music").buildAndExpand(playlistId, userId).toUri();
         return ResponseEntity.created(uri).body("Music added!");
     }
