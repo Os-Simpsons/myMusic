@@ -6,11 +6,8 @@ import com.ciandt.summit.bootcamp2022.entity.Artist;
 import com.ciandt.summit.bootcamp2022.entity.Music;
 import com.ciandt.summit.bootcamp2022.repositories.MusicRepository;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ValidateSizeNameException;
-import com.ciandt.summit.bootcamp2022.utils.TokenService;
-import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -31,9 +28,6 @@ public class MusicServiceImplTest {
 
     @Mock
     private MusicRepository musicRepository;
-
-    @Mock
-    private TokenService tokenService;
 
     private UsernameDto usernameDto;
 
@@ -64,7 +58,7 @@ public class MusicServiceImplTest {
                 .when(musicRepository)
                 .getAllMusicArtist(Mockito.anyString());
 
-        List<Music> result = musicService.getMusics(name, usernameDto);
+        List<Music> result = musicService.getMusics(name);
 
         Assertions.assertArrayEquals(expected.toArray(), result.toArray());
     }
@@ -74,17 +68,8 @@ public class MusicServiceImplTest {
     void getArtistLessThanThreeCharacters(String name) {
 
         Assertions.assertThrows(ValidateSizeNameException.class, () -> {
-            musicService.getMusics(name, usernameDto);
+            musicService.getMusics(name);
         });
     }
 
-    @Test
-    void shouldThrowInvalidLogDataException() {
-
-        Mockito.doThrow(InvalidLogDataException.class).when(tokenService).validateToken(Mockito.any(UsernameDto.class));
-
-        Assertions.assertThrows(InvalidLogDataException.class, () -> {
-            musicService.getMusics("Nirvana", new UsernameDto());
-        });
-    }
 }

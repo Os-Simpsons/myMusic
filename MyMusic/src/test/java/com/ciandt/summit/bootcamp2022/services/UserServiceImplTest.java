@@ -6,8 +6,6 @@ import com.ciandt.summit.bootcamp2022.dto.UsernameDto;
 import com.ciandt.summit.bootcamp2022.entity.*;
 import com.ciandt.summit.bootcamp2022.repositories.UserRepository;
 import com.ciandt.summit.bootcamp2022.services.exceptions.ResourceNotFoundException;
-import com.ciandt.summit.bootcamp2022.utils.TokenService;
-import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,9 +23,6 @@ public class UserServiceImplTest {
 
     @InjectMocks
     private UserServiceImpl serviceImpl;
-
-    @Mock
-    private TokenService tokenService;
 
     @Mock
     private UserRepository userRepository;
@@ -56,31 +51,23 @@ public class UserServiceImplTest {
         user = new User("fe5c979a-469b-4c4b-ab5e-64f72f653ea5", "joao", playlist, userType );
         userType = new UserType("1a2c3461-27f8-4976-afa6-8b5e51c024e4", "Comum", usersList);
         userDTO = new UserDTO("fe5c979a-469b-4c4b-ab5e-64f72f653ea5", "joao", userType );
-        Mockito.doNothing().when(tokenService).validateToken(usernameDto);
+
     }
 
     @Test
     void shouldReturn400WhenUserNotExist() {
         Mockito.when(userRepository.getById(userNoExistsId)).thenThrow(ResourceNotFoundException.class);
         Assertions.assertThrows(ResourceNotFoundException.class, () -> {
-            serviceImpl.getUserById(userNoExistsId, usernameDto);
+            serviceImpl.getUserById(userNoExistsId);
         });
     }
 
-    @Test
-    void shouldReturn401WhenTokenIsNotValid() {
-        Mockito.doThrow(InvalidLogDataException.class).when(tokenService).validateToken(usernameDto);
-        Mockito.when(userRepository.getById(userExistsId)).thenReturn(user);
-        Assertions.assertThrows(InvalidLogDataException.class, () -> {
-            serviceImpl.getUserById(userExistsId, usernameDto);
-        });
-    }
 
     @Test
     void shouldReturn200WhenUserExists() {
         Mockito.when(userRepository.getById(userExistsId)).thenReturn(user);
         Assertions.assertDoesNotThrow(() -> {
-            serviceImpl.getUserById(userExistsId, usernameDto);
+            serviceImpl.getUserById(userExistsId);
         });
     }
 
