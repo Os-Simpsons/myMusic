@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="Adicionado Jacoco e PItest.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/InterceptorTest.java" afterDir="false" />
+    <list default="true" id="b19b9700-28ba-4e8c-b940-abe8e2e742a2" name="Changes" comment="Implementação da cache">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/config/Interceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/config/Interceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/MusicServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/services/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ciandt/summit/bootcamp2022/utils/TokenService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/MusicControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/MusicControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/PlaylistControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/MusicServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/MusicServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/PlaylistServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ciandt/summit/bootcamp2022/services/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +76,20 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MusicControllerTest">
+  <component name="RunManager" selected="Application.SummitBootcampApplication">
+    <configuration name="SummitBootcampApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.SummitBootcampApplication" />
+      <module name="summit-bootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MusicControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
@@ -134,22 +137,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MusicControllerTest.shouldGetMusicAndArtistAndReturn400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="summit-bootcamp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ciandt.summit.bootcamp2022.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ciandt.summit.bootcamp2022.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.ciandt.summit.bootcamp2022.controller.MusicControllerTest" />
-      <option name="METHOD_NAME" value="shouldGetMusicAndArtistAndReturn400" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MusicControllerTest.shouldGetMusicAndArtistAndReturn401" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="summit-bootcamp" />
       <extension name="coverage">
@@ -168,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SummitBootcampApplication" />
         <item itemvalue="JUnit.MusicControllerTest" />
         <item itemvalue="JUnit.MusicControllerTest.shouldGetMusicAndArtistAndReturn401" />
         <item itemvalue="JUnit.MusicControllerTest.shouldGetMusicAndArtistAndReturn204" />
         <item itemvalue="JUnit.MusicControllerTest.shouldGetMusicAndArtistAndReturn200" />
-        <item itemvalue="JUnit.MusicControllerTest.shouldGetMusicAndArtistAndReturn400" />
       </list>
     </recent_temporary>
   </component>
@@ -185,6 +172,14 @@
       <option name="presentableId" value="Default" />
       <updated>1661444214210</updated>
     </task>
+    <task id="LOCAL-00001" summary="Implementação da cache">
+      <created>1663251451623</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663251451623</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,21 +193,25 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implementação da cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação da cache" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MyMusic$MusicControllerTest.ic" NAME="MusicControllerTest Coverage Results" MODIFIED="1662663470457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ciandt.summit.bootcamp2022.controller.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/MyMusic$SummitBootcampApplicationTests.ic" NAME="SummitBootcampApplicationTests Coverage Results" MODIFIED="1662663437377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ciandt.summit.bootcamp2022.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/MyMusic$SummitBootcampApplication.ic" NAME="SummitBootcampApplication Coverage Results" MODIFIED="1662663400131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.ciandt.summit.bootcamp2022.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/MyMusic$PlaylistControllerTest.ic" NAME="PlaylistControllerTest Coverage Results" MODIFIED="1662663603243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ciandt.summit.bootcamp2022.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/MyMusic$UserControllerTest.ic" NAME="UserControllerTest Coverage Results" MODIFIED="1662663625893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.ciandt.summit.bootcamp2022.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MyMusic$MusicControllerTest.ic" NAME="MusicControllerTest Coverage Results" MODIFIED="1662663470457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ciandt.summit.bootcamp2022.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MyMusic$SummitBootcampApplication.ic" NAME="SummitBootcampApplication Coverage Results" MODIFIED="1662663400131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ciandt.summit.bootcamp2022.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MyMusic$SummitBootcampApplicationTests.ic" NAME="SummitBootcampApplicationTests Coverage Results" MODIFIED="1662663437377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ciandt.summit.bootcamp2022.*</FILTER>
     </SUITE>
   </component>
 </project>
