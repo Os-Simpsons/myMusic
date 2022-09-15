@@ -8,6 +8,7 @@ import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,6 +24,7 @@ public class UserServiceImpl implements UserService{
     private static Logger logger = LogManager.getLogger(PlaylistServiceImpl.class);
 
     @Transactional
+    @Cacheable(cacheNames = "getUserById")
     @Override
     public UserDTO getUserById(String id) {
         try {

@@ -7,6 +7,7 @@ import com.ciandt.summit.bootcamp2022.utils.exceptions.InvalidLogDataException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class MusicServiceImpl implements MusicService {
 
     private static Logger logger = LogManager.getLogger(MusicServiceImpl.class);
 
+    @Cacheable(cacheNames = "getMusics")
     @Override
     public List<Music> getMusics(String name) {
         try {
